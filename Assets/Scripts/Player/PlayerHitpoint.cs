@@ -32,6 +32,8 @@ public class PlayerHitpoint : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            if (isInvincible)
+                return;
             hp -= 1;
             isInvincible = true;
         }
