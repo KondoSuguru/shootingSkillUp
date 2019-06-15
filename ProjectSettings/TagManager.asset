@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DeleteArea
+  - BulletDeleteArea
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - Enemy
+  - 
   - 
   - 
   - 

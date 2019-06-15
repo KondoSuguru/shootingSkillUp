@@ -11,4 +11,19 @@ public class Shot : MonoBehaviour {
         //rb.velocity += new Vector3(speed, 0, 0);
         transform.position += new Vector3(0, 0, speed);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //BulletDeleteAreaに触れたら消滅
+        if(other.tag == "BulletDeleteArea")
+        {
+            Destroy(gameObject);
+        }
+
+        //Enemyに触れたら消滅
+        if(other.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

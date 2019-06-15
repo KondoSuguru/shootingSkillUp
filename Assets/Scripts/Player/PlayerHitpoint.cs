@@ -30,9 +30,7 @@ public class PlayerHitpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        string layerName = LayerMask.LayerToName(other.gameObject.layer);
-
-        if(layerName == "Enemy")
+        if(other.tag == "Enemy")
         {
             hp -= 1;
             isInvincible = true;
