@@ -6,9 +6,6 @@ public class Bullet : MonoBehaviour {
     public float speed = 1f;
     public GameObject player;
 
-    private void Start() {
-    }
-
     private void Update() {
         if (Input.GetKey(KeyCode.Z)) {
             TrackingShot();
