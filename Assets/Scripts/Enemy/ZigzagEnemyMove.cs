@@ -10,24 +10,12 @@ public class ZigzagEnemyMove : MonoBehaviour
     public float amplitude = 1;//振幅
     private int count;
     private bool isStart;//更新をするかどうか
-    MeshRenderer meshRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         count = 30;
         isStart = false;
-        meshRenderer = GetComponent<MeshRenderer>();
-        //RGB値は変えずに透明にする
-        //meshRenderer.material.color = new Color(
-        //    meshRenderer.material.color.r,
-        //    meshRenderer.material.color.g,
-        //    meshRenderer.material.color.b,
-        //    1.0f);
-
-        Color color = meshRenderer.material.color;
-        color.a = 1.0f;
-        meshRenderer.material.color = color;
     }
 
     // Update is called once per frame
@@ -52,16 +40,6 @@ public class ZigzagEnemyMove : MonoBehaviour
         if (other.tag == "EnemyStartLine")
         {
             isStart = true;
-            //RGB値は変えずに不透明にする
-            //meshRenderer.material.color = new Color(
-            //    meshRenderer.material.color.r,
-            //    meshRenderer.material.color.g,
-            //    meshRenderer.material.color.b,
-            //    0.0f);
-
-            Color color = meshRenderer.material.color;
-            color.a = 0.0f;
-            meshRenderer.material.color = color;
         }
     }
 }

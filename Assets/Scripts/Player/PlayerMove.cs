@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     {
         Vector3 moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal") * speed;
+        moveVector.z = Input.GetAxis("Vertical") * speed;
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
     }
 }
