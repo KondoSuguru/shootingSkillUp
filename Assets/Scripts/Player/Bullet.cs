@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public float speed = 1f;
-    public GameObject player;
+    public float TrackingSpeed = 0.3f;
+    public Transform player;
+    public BulletGenerate bulletGenerate;
 
     private void Update() {
         if (Input.GetKey(KeyCode.Z)) {
             TrackingShot();
-        } else {
-            transform.position += new Vector3(0, 0, speed);
         }
+        transform.position += new Vector3(0, 0, speed);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -52,7 +53,7 @@ public class Bullet : MonoBehaviour {
         if (SerchMostNearEnemy() != null) {
             Vector3 p2e = SerchMostNearEnemy().transform.position - transform.position;
             p2e.Normalize();
-            transform.position += new Vector3(p2e.x * speed, 0, p2e.z * speed);
+            transform.position += new Vector3(p2e.x * TrackingSpeed, p2e.y * speed, 0);
         }
     }
 }
