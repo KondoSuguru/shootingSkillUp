@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shot : MonoBehaviour {
+public class Bullet : MonoBehaviour {
     public float speed = 0.01f;
     Rigidbody rb;
 

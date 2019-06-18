@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +18,5 @@ public class EnemyMove : MonoBehaviour
         Vector3 pos = transform.position;
         pos.z -= speed;
         transform.position = pos;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "DeleteArea")
-        {
-            Destroy(gameObject);
-        }
     }
 }

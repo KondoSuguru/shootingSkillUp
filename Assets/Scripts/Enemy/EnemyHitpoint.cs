@@ -27,5 +27,10 @@ public class EnemyHitpoint : MonoBehaviour
         {
             hp -= 1;
         }
+
+        if (other.gameObject.tag == "DeleteArea")
+        {
+            Destroy(gameObject);
+        }
     }
 }
