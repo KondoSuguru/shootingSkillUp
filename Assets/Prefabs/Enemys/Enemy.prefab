@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2059524696617761364}
   - component: {fileID: 2059524696617761361}
   - component: {fileID: 2059524696617761362}
+  - component: {fileID: 2577649171717918948}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f5937104291e34ea83192eedecacd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 0.2
 --- !u!54 &2059524696617761361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,5 +137,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  DropRate: 30
+  DropRate: 10
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
+--- !u!114 &2577649171717918948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059524696617761387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6a8aa25459f9844a88018b2af8b79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 283778333787949128, guid: eadc85b093a59f841ba3fb1fed26ba96, type: 3}
+  shotTime: 3
+  canShot: 0
