@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  optionSpeed: 1
-  player: {fileID: 7341841398308433799, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
+  TrackingSpeed: 0.6
+  player: {fileID: 7341841398308433804, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
   bulletGenerate: {fileID: 1019736651, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
