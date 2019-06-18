@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shot : MonoBehaviour {
-    public float speed = 0.01f;
-    Rigidbody rb;
+public class Bullet : MonoBehaviour {
+    public float speed = 1f;
+    public GameObject player;
+
+    private void Start() {
+    }
 
     private void Update() {
-        //rb.AddForce(speed, 0, 0);
-        //rb.velocity += new Vector3(speed, 0, 0);
-        if (Input.GetKey(KeyCode.Z) && SerchMostNearEnemy() != null) {
-            Vector3 p2e = SerchMostNearEnemy().transform.position - transform.position;
-            p2e.Normalize();
-            transform.position += new Vector3(p2e.x * speed, 0, p2e.z * speed);
+        if (Input.GetKey(KeyCode.Z)) {
+            TrackingShot();
         } else {
             transform.position += new Vector3(0, 0, speed);
         }
@@ -30,6 +29,7 @@ public class Shot : MonoBehaviour {
         }
     }
 
+    //一番近いエネミーを走査
     private GameObject SerchMostNearEnemy() {
         GameObject nearEnemy = null;
         float distance = 1000f;
@@ -48,5 +48,14 @@ public class Shot : MonoBehaviour {
         }
 
         return nearEnemy;
+    }
+
+    //敵を追尾する弾
+    private void TrackingShot() {
+        if (SerchMostNearEnemy() != null) {
+            Vector3 p2e = SerchMostNearEnemy().transform.position - transform.position;
+            p2e.Normalize();
+            transform.position += new Vector3(p2e.x * speed, 0, p2e.z * speed);
+        }
     }
 }
