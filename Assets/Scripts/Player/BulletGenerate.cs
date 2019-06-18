@@ -8,19 +8,6 @@ public class BulletGenerate : MonoBehaviour {
     float time = 0f;
     bool canShot = false;
 
-    // Start is called before the first frame update
-    //IEnumerator Start() {
-    //    while (true) {
-    //        if (Input.GetKey(KeyCode.Space) && canShot) {
-    //            // 弾をプレイヤーと同じ位置/角度で作成
-    //            Instantiate(bullet, transform.position, transform.rotation);
-    //            canShot = false;
-    //        }
-    //        // 1秒待つ
-    //        yield return new WaitForSeconds(1f);
-    //    }
-    //}
-
     private void Update() {
         if (Input.GetKey(KeyCode.Space) && canShot) {
             // 弾をプレイヤーと同じ位置/角度で作成
