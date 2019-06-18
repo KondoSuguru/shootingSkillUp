@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyHitpoint : MonoBehaviour
 {
     public int hp = 1;
+    public int DropRate = 30;
+    public GameObject Item;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,11 @@ public class EnemyHitpoint : MonoBehaviour
     {
         if(hp <= 0)
         {
+            //アイテムを落とす
+            if(Random.Range(0.0f,100.0f) < DropRate)
+            {
+                Instantiate(Item, transform.position, Item.transform.rotation);
+            }
             Destroy(gameObject);
         }
     }
