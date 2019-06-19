@@ -25,12 +25,4 @@ public class PlayerMove : MonoBehaviour
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
         prePos = transform.position;
     }
-
-    public bool IsMoving() {
-        if (transform.position == prePos) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
