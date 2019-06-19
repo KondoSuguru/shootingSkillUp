@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  DropRate: 30
+  DropRate: 100
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}

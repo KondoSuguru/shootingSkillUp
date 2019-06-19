@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9199521303763999773}
   - component: {fileID: 1133658005065788162}
   - component: {fileID: 2713573412528009528}
+  - component: {fileID: -7590024683924513845}
   m_Layer: 0
   m_Name: PowerUpItem
   m_TagString: Untagged
@@ -106,3 +107,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+--- !u!114 &-7590024683924513845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203323663990979274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7c621c66e6f744b9c9ea4f23a2a967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletGenerate: {fileID: 1019736651, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}

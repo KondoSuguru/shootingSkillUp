@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletGenerate : MonoBehaviour {
-    public float shotTime = 0.1f;
+    public float shotTime = 1f;
     public float optionPos = 4f;
     public float optionSpeed = 0.3f;
     public float optionTrackingSpeed = 0.05f;
     public Transform bullet;
     public GameObject option;
+    public PlayerMove playerMove;
     GameObject[] options;
     Vector3[] optionDefaultPos;
     float time = 0f;
@@ -46,6 +47,7 @@ public class BulletGenerate : MonoBehaviour {
         CanShot();
     }
 
+    //オプションを生成
     private void GenerateOption() {
         if (hasOption) {
             return;
@@ -74,8 +76,9 @@ public class BulletGenerate : MonoBehaviour {
         }
     }
 
+    //規定の位置まで移動
     private void TrackingOptionToPlayer() {
-        if (!hasOption) {
+        if (!hasOption || playerMove.IsMoving()) {
             return;
         }
 
@@ -96,10 +99,13 @@ public class BulletGenerate : MonoBehaviour {
         }
     }
 
-    bool GetOption() {
-        return hasOption;
+    public void SetShotTime(float set) {
+        shotTime -= set;
+        if (shotTime < 0.1f) {
+            shotTime = 0.1f;
+        }
     }
-    void SetOption(bool set) {
-        hasOption = set;
+    public float GetShotTime() {
+        return shotTime;
     }
 }
