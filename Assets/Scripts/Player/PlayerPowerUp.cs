@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour {
+    public Bullet bullet;
     int powerUpCount;
     int maxCount;
     BulletGenerate bulletGenerate;
     FloatingBullet floatingBullet;
+    PlayerMove playerMove;
     Razer razer;
 
     private void Start() {
@@ -14,6 +16,7 @@ public class PlayerPowerUp : MonoBehaviour {
         maxCount = 5;
         bulletGenerate = GetComponent<BulletGenerate>();
         floatingBullet = GetComponent<FloatingBullet>();
+        playerMove = GetComponent<PlayerMove>();
         razer = GetComponent<Razer>();
     }
 
@@ -27,16 +30,18 @@ public class PlayerPowerUp : MonoBehaviour {
 
     void PowerUp() {
         if (Input.GetKeyDown(KeyCode.X)) {
-            if (powerUpCount == 1 && !bulletGenerate.IsMaxShotTime()) {
+            if (powerUpCount == 1 && !playerMove.IsMaxSpeed()) {
+                playerMove.SetSpeed(2f);
+            } else if (powerUpCount == 2 && !bulletGenerate.IsMaxShotTime()) {
                 bulletGenerate.SetShotTime(0.1f);
-            } else if (powerUpCount == 2 && !floatingBullet.IsMaxCount()) {
-                floatingBullet.GenerateOption();
-            } else if (powerUpCount == 3 && !razer.GetRazer()) {
+            } else if (powerUpCount == 3 && !bullet.GetTracking()) {
+                bullet.SetTracking(true);
+            } else if (powerUpCount == 4 && !razer.GetRazer()) {
                 razer.SetRazer(true);
-            } else if (powerUpCount == 4 && !bulletGenerate.IsMaxShotTime()) {
-                bulletGenerate.SetShotTime(0.1f);
-            } else if (powerUpCount == 5 && !bulletGenerate.IsMaxShotTime()) {
-                bulletGenerate.SetShotTime(0.1f);
+            } else if (powerUpCount == 5 && !floatingBullet.IsMaxCount()) {
+                floatingBullet.GenerateOption();
+            } else { //パワーアップ不能ならリターン
+                return;
             }
             powerUpCount = 0;
         }

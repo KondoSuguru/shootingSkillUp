@@ -6,7 +6,7 @@ public class Razer : MonoBehaviour {
     public Bullet bullet;
     public GameObject razer;
     Vector3 maxScale = new Vector3(0.1f, 0.1f, 15f);
-    bool enabledRazer = false;
+    static bool enabledRazer = false;
 
     private void Update() {
         if (!enabledRazer) {
