@@ -153,5 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 283778333787949128, guid: eadc85b093a59f841ba3fb1fed26ba96, type: 3}
-  shotTime: 2
+  shotTime: 2.5
   canShot: 0
