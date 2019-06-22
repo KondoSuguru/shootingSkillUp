@@ -13,7 +13,7 @@ public class FloatingBullet : MonoBehaviour {
     //const float positionZ = -2f;
     const float trackingSpeed = 0.2f;
     const int maxCount = 2;
-    int currentCount = 0;
+    static int currentCount = 0;
 
     private void Start() {
         floatingBullets = new GameObject[maxCount];

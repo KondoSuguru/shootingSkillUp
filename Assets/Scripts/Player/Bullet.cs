@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     float speed = 1f;
-    float trackingSpeed = 0.3f;
+    float trackingSpeed = 0.5f;
+    static bool isTracking = false;
 
     private void Update() {
-        if (Input.GetKey(KeyCode.Z)) {
-            TrackingShot();
-        }
+        TrackingShot();
         transform.position += new Vector3(0, 0, speed);
     }
 
@@ -54,13 +53,23 @@ public class Bullet : MonoBehaviour {
 
     //敵を追尾する弾
     private void TrackingShot() {
+        if (!isTracking) {
+            return;
+        }
+
         if (SerchMostNearEnemy() != null) {
             Vector3 p2e = SerchMostNearEnemy().transform.position - transform.position;
             p2e.Normalize();
-            transform.position += new Vector3(p2e.x * trackingSpeed, p2e.y * speed, 0);
+            transform.position += new Vector3(p2e.x * trackingSpeed, 0, 0);
         }
     }
 
+    public void SetTracking(bool set) {
+        isTracking = set;
+    }
+    public bool GetTracking() {
+        return isTracking;
+    }
     public float GetSpeed() {
         return speed;
     }
