@@ -16,7 +16,7 @@ public class EnemyMove : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
-        pos.z -= speed;
+        pos += transform.TransformDirection(Vector3.forward) * speed;
         transform.position = pos;
     }
 }
