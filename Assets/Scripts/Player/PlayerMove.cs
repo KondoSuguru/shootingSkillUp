@@ -7,11 +7,13 @@ public class PlayerMove : MonoBehaviour
     public float speed = 10.0f; //移動速度
     public float forceMultiplier = 50.0f; //移動速度の入力に対する追従度（大きいほどきびきび動く）
     private Rigidbody rb;
+    Vector3 prePos;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        prePos = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -21,5 +23,6 @@ public class PlayerMove : MonoBehaviour
         moveVector.x = Input.GetAxis("Horizontal") * speed;
         moveVector.z = Input.GetAxis("Vertical") * speed;
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
+        prePos = transform.position;
     }
 }
