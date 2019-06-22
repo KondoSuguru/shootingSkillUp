@@ -7,7 +7,7 @@ public class BulletGenerate : MonoBehaviour {
     public GameObject bullet;
     public FloatingBullet floatingBullet;
     float time = 0f;
-    float shotTime = 0.5f;
+    float shotTime = 1.0f;
     bool canShot = false;
 
     private void Update() {
@@ -25,8 +25,12 @@ public class BulletGenerate : MonoBehaviour {
 
     //発射準備
     void CanShot() {
+        if (canShot) {
+            return;
+        }
+
         time += Time.deltaTime;
-        if (time >= 0.5f) {
+        if (time >= shotTime) {
             canShot = true;
             time = 0;
         }
