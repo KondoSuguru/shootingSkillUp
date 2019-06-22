@@ -40,4 +40,9 @@ public class EnemyHitpoint : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public int GetHp()
+    {
+        return hp;
+    }
 }
