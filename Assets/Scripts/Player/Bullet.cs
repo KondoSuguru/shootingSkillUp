@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-    public float speed = 1f;
-    public float TrackingSpeed = 0.3f;
     public Transform player;
     public BulletGenerate bulletGenerate;
+    float speed = 1f;
+    float trackingSpeed = 0.3f;
 
     private void Update() {
         if (Input.GetKey(KeyCode.Z)) {
@@ -53,7 +53,7 @@ public class Bullet : MonoBehaviour {
         if (SerchMostNearEnemy() != null) {
             Vector3 p2e = SerchMostNearEnemy().transform.position - transform.position;
             p2e.Normalize();
-            transform.position += new Vector3(p2e.x * TrackingSpeed, p2e.y * speed, 0);
+            transform.position += new Vector3(p2e.x * trackingSpeed, p2e.y * speed, 0);
         }
     }
 }
