@@ -27,12 +27,16 @@ public class PlayerPowerUp : MonoBehaviour {
 
     void PowerUp() {
         if (Input.GetKeyDown(KeyCode.X)) {
-            switch (powerUpCount) {
-                case 1: bulletGenerate.SetShotTime(0.1f); break;
-                case 2: floatingBullet.GenerateOption(); break;
-                case 3: razer.SetRazer(true); break;
-                case 4: bulletGenerate.SetShotTime(0.1f); break;
-                case 5: bulletGenerate.SetShotTime(0.1f); break;
+            if (powerUpCount == 1 && !bulletGenerate.IsMaxShotTime()) {
+                bulletGenerate.SetShotTime(0.1f);
+            } else if (powerUpCount == 2 && !floatingBullet.IsMaxCount()) {
+                floatingBullet.GenerateOption();
+            } else if (powerUpCount == 3 && !razer.GetRazer()) {
+                razer.SetRazer(true);
+            } else if (powerUpCount == 4 && !bulletGenerate.IsMaxShotTime()) {
+                bulletGenerate.SetShotTime(0.1f);
+            } else if (powerUpCount == 5 && !bulletGenerate.IsMaxShotTime()) {
+                bulletGenerate.SetShotTime(0.1f);
             }
             powerUpCount = 0;
         }
@@ -42,5 +46,9 @@ public class PlayerPowerUp : MonoBehaviour {
         if (other.tag == "Item") {
             powerUpCount++;
         }
+    }
+
+    public int GetPowerUpCount() {
+        return powerUpCount;
     }
 }

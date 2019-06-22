@@ -72,4 +72,7 @@ public class FloatingBullet : MonoBehaviour {
     public GameObject[] GetOptions() {
         return floatingBullets;
     }
+    public bool IsMaxCount() {
+        return currentCount == maxCount ? true : false;
+    }
 }

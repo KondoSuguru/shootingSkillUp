@@ -41,6 +41,9 @@ public class BulletGenerate : MonoBehaviour {
     //レーザーを生成
     void GenerateRazer() {
         Instantiate(razerObj, transform.position, transform.rotation);
+        for (int i = 0; i < floatingBullet.GetCount(); i++) {
+            Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
+        }
         razerScript.InitScale();
     }
     void GenerateNormal() {
@@ -59,5 +62,8 @@ public class BulletGenerate : MonoBehaviour {
     }
     public float GetShotTime() {
         return shotTime;
+    }
+    public bool IsMaxShotTime() {
+        return shotTime <= 0.11f ? true : false;
     }
 }
