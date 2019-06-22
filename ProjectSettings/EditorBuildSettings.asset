@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: bf13b2ab7060bfc4588c1ca400c01343
+  - enabled: 1
+    path: Assets/Scenes/Kondo.unity
+    guid: d8ded99ae24461a4784c9d160ff9a535
+  - enabled: 1
+    path: Assets/Scenes/Clear.unity
+    guid: 83330526f02589349a09b73c04134aea
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 57026d4a0726c9042ba7d7bfe15f1290
   m_configObjects: {}

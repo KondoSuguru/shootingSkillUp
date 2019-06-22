@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5719517344998541378}
   - component: {fileID: 5719517344998541390}
   - component: {fileID: 5719517344998541379}
-  - component: {fileID: 5719517344998541389}
   - component: {fileID: 5719517344998541388}
+  - component: {fileID: -1345231570912276511}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -124,21 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
---- !u!114 &5719517344998541389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719517344998541380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20160d10a51bd04a8c18d7ae7a48c71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 200
-  DropRate: 0
-  Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
 --- !u!114 &5719517344998541388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +146,16 @@ MonoBehaviour:
     type: 3}
   shotTime: 1.5
   canShot: 1
+--- !u!114 &-1345231570912276511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719517344998541380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f1978a439318e40a19e249e912f029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 200

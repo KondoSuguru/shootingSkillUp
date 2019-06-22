@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    private EnemyHitpoint enemyHitpoint;
+    private BossHitpoint Hitpoint;
     private int maxHp;
     public GameObject easyBullet;
     public GameObject normalBullet;
@@ -26,8 +26,8 @@ public class BossAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyHitpoint = GetComponent<EnemyHitpoint>();
-        maxHp = enemyHitpoint.GetHp();
+        Hitpoint = GetComponent<BossHitpoint>();
+        maxHp = Hitpoint.GetHp();
         timer = (int)shotTime * 60;
         state = State.Easy;
     }
@@ -61,7 +61,7 @@ public class BossAttack : MonoBehaviour
             Instantiate(easyBullet, transform.position, transform.rotation);
             timer = 0;
         }
-        if (enemyHitpoint.GetHp() <= maxHp * 0.7)
+        if (Hitpoint.GetHp() <= maxHp * 0.7)
             state = State.EnemyShot;
     }
 
@@ -72,7 +72,7 @@ public class BossAttack : MonoBehaviour
             Instantiate(normalBullet, transform.position, transform.rotation);
             timer = 0;
         }
-        if (enemyHitpoint.GetHp() <= maxHp * 0.3)
+        if (Hitpoint.GetHp() <= maxHp * 0.3)
             state = State.EnemyShot;
     }
 
@@ -90,9 +90,9 @@ public class BossAttack : MonoBehaviour
         Instantiate(enemyShotBullet, transform.position, transform.rotation);
         timer = 0;
 
-        if (enemyHitpoint.GetHp() <= maxHp * 0.3)
+        if (Hitpoint.GetHp() <= maxHp * 0.3)
             state = State.Hard;
-        else if (enemyHitpoint.GetHp() <= maxHp * 0.7)
+        else if (Hitpoint.GetHp() <= maxHp * 0.7)
             state = State.Normal;
     }
 }

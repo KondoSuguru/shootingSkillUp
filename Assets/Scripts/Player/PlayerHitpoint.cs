@@ -8,11 +8,16 @@ public class PlayerHitpoint : MonoBehaviour
     private bool isInvincible; //無敵状態の判定
     private int invincibleTimer;
 
+    private GameObject manager;
+    private GamePlayScene playScene;
+
     // Start is called before the first frame update
     void Start()
     {
         isInvincible = false;
         invincibleTimer = 0;
+        manager = GameObject.FindGameObjectWithTag("PlaySceneManager");
+        playScene = manager.GetComponent<GamePlayScene>();
     }
 
     // Update is called once per frame
@@ -20,6 +25,8 @@ public class PlayerHitpoint : MonoBehaviour
     {
         if(hp <= 0)
         {
+            //ゲームオーバーシーンに遷移
+            playScene.GameOver();
             Destroy(gameObject);
         }
         if (isInvincible)
