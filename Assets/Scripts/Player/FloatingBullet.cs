@@ -42,7 +42,7 @@ public class FloatingBullet : MonoBehaviour {
     //規定の位置まで移動
     void Move() {
         for (int i = 0; i < currentCount; i++) {
-            if (Vector3.Distance(updatePos[i], floatingBullets[i].transform.position) < 0.1f && updatePos[i].y >= positionY) {
+            if (Vector3.Distance(updatePos[i], floatingBullets[i].transform.position) < 0.1f/* && updatePos[i].y >= positionY*/) {
                 continue;
             }
 
@@ -55,8 +55,8 @@ public class FloatingBullet : MonoBehaviour {
     //移動すべき場所の更新(一番最初に実行！)
     void UpdatePos() {
         updatePos = new Vector3[maxCount] {
-            new Vector3(player.transform.position.x + positionX, positionY, player.transform.position.z + positionZ),
-            new Vector3(player.transform.position.x + -positionX, positionY, player.transform.position.z + positionZ),
+            new Vector3(player.transform.position.x + positionX, player.transform.position.y, player.transform.position.z),
+            new Vector3(player.transform.position.x + -positionX, player.transform.position.y, player.transform.position.z),
         };
         //for (int i = 0; i < maxCount; i++) {
         //    updatePos[i] = new Vector3(
