@@ -153,10 +153,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (5)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -213,10 +213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (5)
+      propertyPath: canShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -238,10 +238,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -298,10 +298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (4)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -513,10 +513,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -573,10 +573,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (8)
+      propertyPath: canShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -598,10 +598,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -658,10 +658,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (6)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -683,10 +683,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -743,10 +743,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (3)
+      propertyPath: canShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -863,10 +863,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (11)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -923,10 +923,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (11)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1128,10 +1128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1188,10 +1188,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (2)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1303,10 +1303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1363,10 +1363,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1573,10 +1573,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1633,10 +1633,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (1)
+      propertyPath: canShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1658,10 +1658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (10)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1718,10 +1718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (10)
+      propertyPath: canShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1743,10 +1743,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1803,10 +1803,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (7)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1918,10 +1918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -1978,10 +1978,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (9)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -2003,10 +2003,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (13)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -2063,10 +2063,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (13)
+      propertyPath: canShot
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -2278,10 +2278,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035944920867447033}
     m_Modifications:
-    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: canShot
-      value: 1
+      propertyPath: m_Name
+      value: Enemy (12)
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761360, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
@@ -2338,10 +2338,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2059524696617761387, guid: 3beaa34c27e979a4bb90106c4942546c,
+    - target: {fileID: 2577649171717918948, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}
-      propertyPath: m_Name
-      value: Enemy (12)
+      propertyPath: canShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059524696617761362, guid: 3beaa34c27e979a4bb90106c4942546c,
         type: 3}

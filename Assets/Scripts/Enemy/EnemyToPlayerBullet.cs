@@ -12,8 +12,7 @@ public class EnemyToPlayerBullet : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
 
-        Vector3 vecTarget = target.transform.position - transform.position;
-        transform.rotation = Quaternion.LookRotation(vecTarget);
+        transform.LookAt(target.transform.position);
     }
 
     // Update is called once per frame
@@ -22,5 +21,13 @@ public class EnemyToPlayerBullet : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.TransformDirection(Vector3.forward) * speed;
         transform.position = pos;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "DeleteArea")
+        {
+            Destroy(gameObject);
+        }
     }
 }
