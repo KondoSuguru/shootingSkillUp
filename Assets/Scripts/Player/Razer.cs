@@ -3,30 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Razer : MonoBehaviour {
-    LineRenderer lineRenderer;
-
-    private void Awake() {
-        lineRenderer = GetComponent<LineRenderer>();
-    }
+    public Bullet bullet;
+    public GameObject razer;
+    Vector3 maxScale = new Vector3(0.1f, 0.1f, 10f);
+    bool enabledRazer = false;
 
     private void Update() {
-
-        if (Input.GetKeyDown(KeyCode.C)) {
-            LineScaleUp();
-            lineRenderer.enabled = true;
-        }
-    }
-
-    void LineScaleUp() {
-        if (lineRenderer.GetPosition(1).z >= 15f) {
+        if (!enabledRazer) {
             return;
         }
-        lineRenderer.SetPosition(1, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.001f));
+        ScaleUp();
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "BulletDeleteArea") {
-            Destroy(gameObject);
+    void ScaleUp() {
+        if (razer.transform.localScale.z >= maxScale.z) {
+            razer.transform.localScale = maxScale;
+            return;
         }
+        razer.transform.localScale += new Vector3(0, 0, 0.1f);
+    }
+
+    public void SetRazer(bool set) {
+        enabledRazer = set;
+    }
+    public bool GetRazer() {
+        return enabledRazer;
+    }
+    public void InitScale() {
+        razer.transform.localScale = maxScale;
     }
 }

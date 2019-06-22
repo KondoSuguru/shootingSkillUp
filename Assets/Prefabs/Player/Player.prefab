@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3091523932984962432}
   - component: {fileID: 1019736651}
   - component: {fileID: 1024357492}
+  - component: {fileID: 1327556221}
   - component: {fileID: 7413525467977809484}
   m_Layer: 0
   m_Name: Player
@@ -154,6 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5165808788109682791, guid: 22dbad092a6e5ec43a23bbf816929bdd, type: 3}
   floatingBullet: {fileID: 1024357492}
+  razerObj: {fileID: 4235161652891093052, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    type: 3}
+  razerScript: {fileID: 1327556221}
 --- !u!114 &1024357492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +173,20 @@ MonoBehaviour:
   player: {fileID: 7341841398308433804}
   floatingBullet: {fileID: 5394280675156177159, guid: afe41e39e7951094aa3ffba344867d79,
     type: 3}
+--- !u!114 &1327556221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341841398308433799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d535523b7e533b438febe194776e0d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 4513311559441151610, guid: 22dbad092a6e5ec43a23bbf816929bdd, type: 3}
+  razer: {fileID: 4235161652891093052, guid: baa341f67b51f8c4b8b0a0799b544af7, type: 3}
 --- !u!114 &7413525467977809484
 MonoBehaviour:
   m_ObjectHideFlags: 0

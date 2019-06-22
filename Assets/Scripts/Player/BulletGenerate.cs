@@ -6,6 +6,8 @@ using UnityEngine;
 public class BulletGenerate : MonoBehaviour {
     public GameObject bullet;
     public FloatingBullet floatingBullet;
+    public GameObject razerObj;
+    public Razer razerScript;
     float time = 0f;
     float shotTime = 1.0f;
     bool canShot = false;
@@ -14,12 +16,12 @@ public class BulletGenerate : MonoBehaviour {
         CanShot();
 
         if (Input.GetKey(KeyCode.Space) && canShot) {
-            // 弾をプレイヤーと同じ位置/角度で作成
-            Instantiate(bullet, transform.position, transform.rotation);
-            for (int i = 0; i < floatingBullet.GetCount(); i++) {
-                Instantiate(bullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-            }
             canShot = false;
+            if (razerScript.GetRazer()) {
+                GenerateRazer();
+            } else {
+                GenerateNormal();
+            }
         }
     }
 
@@ -33,6 +35,19 @@ public class BulletGenerate : MonoBehaviour {
         if (time >= shotTime) {
             canShot = true;
             time = 0;
+        }
+    }
+
+    //レーザーを生成
+    void GenerateRazer() {
+        Instantiate(razerObj, transform.position, transform.rotation);
+        razerScript.InitScale();
+    }
+    void GenerateNormal() {
+        // 弾をプレイヤーと同じ位置/角度で作成
+        Instantiate(bullet, transform.position, transform.rotation);
+        for (int i = 0; i < floatingBullet.GetCount(); i++) {
+            Instantiate(bullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
     }
 
