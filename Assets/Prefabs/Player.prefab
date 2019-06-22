@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9436636055c720c48a1ce2c360ca5cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 7945525408228871110, guid: 22dbad092a6e5ec43a23bbf816929bdd, type: 3}
+  bullet: {fileID: 5165808788109682791, guid: 22dbad092a6e5ec43a23bbf816929bdd, type: 3}
   floatingBullet: {fileID: 1024357492}
 --- !u!114 &1024357492
 MonoBehaviour:
