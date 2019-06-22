@@ -30,7 +30,7 @@ public class EnemyHitpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Bullet")
+        if(other.tag == "Bullet" || other.tag == "Razer")
         {
             hp -= 1;
         }

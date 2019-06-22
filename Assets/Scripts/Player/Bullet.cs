@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-    public Transform player;
-    public BulletGenerate bulletGenerate;
     float speed = 1f;
     float trackingSpeed = 0.3f;
 
@@ -17,12 +15,18 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         //BulletDeleteAreaに触れたら消滅
-        if (other.tag == "BulletDeleteArea") {
-            Destroy(gameObject);
-        }
+        //if (other.tag == "BulletDeleteArea") {
+        //    Destroy(gameObject);
+        //}
 
         //Enemyに触れたら消滅
-        if (other.tag == "Enemy") {
+        if (other.tag == "Enemy" && tag == "Bullet") {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerExit(Collider other) {
+        //BulletDeleteAreaを超えたら消滅
+        if (other.tag == "BulletDeleteArea") {
             Destroy(gameObject);
         }
     }
@@ -55,5 +59,9 @@ public class Bullet : MonoBehaviour {
             p2e.Normalize();
             transform.position += new Vector3(p2e.x * trackingSpeed, p2e.y * speed, 0);
         }
+    }
+
+    public float GetSpeed() {
+        return speed;
     }
 }
