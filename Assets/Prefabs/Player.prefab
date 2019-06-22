@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3091523932984962432}
   - component: {fileID: 1019736651}
   - component: {fileID: 1024357492}
+  - component: {fileID: 7413525467977809484}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -168,3 +169,15 @@ MonoBehaviour:
   player: {fileID: 7341841398308433804}
   floatingBullet: {fileID: 5394280675156177159, guid: afe41e39e7951094aa3ffba344867d79,
     type: 3}
+--- !u!114 &7413525467977809484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341841398308433799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a272da06712e69341b1222f634fdb10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

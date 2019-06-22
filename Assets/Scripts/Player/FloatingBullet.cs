@@ -9,8 +9,8 @@ public class FloatingBullet : MonoBehaviour {
     GameObject[] floatingBullets;
     Vector3[] updatePos;
     const float positionX = 3f;
-    const float positionY = 4f;
-    const float positionZ = -2f;
+    //const float positionY = 4f;
+    //const float positionZ = -2f;
     const float trackingSpeed = 0.2f;
     const int maxCount = 2;
     int currentCount = 0;
@@ -22,14 +22,14 @@ public class FloatingBullet : MonoBehaviour {
 
     private void Update() {
         UpdatePos();
-        if (Input.GetKeyDown(KeyCode.X)) {
-            GenerateOption();
-        }
+        //if (Input.GetKeyDown(KeyCode.X)) {
+        //    GenerateOption();
+        //}
         Move();
     }
 
     //オプションを生成
-    void GenerateOption() {
+    public void GenerateOption() {
         if (currentCount == maxCount) {
             return;
         }
