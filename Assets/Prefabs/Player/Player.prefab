@@ -112,7 +112,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &7341841398308433805
 MonoBehaviour:
@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2a6fbb95395c34eb85a4125f77d986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7341841398308433804}
   floatingBullet: {fileID: 5394280675156177159, guid: afe41e39e7951094aa3ffba344867d79,
     type: 3}
+  playerMove: {fileID: 7341841398308433805}
 --- !u!114 &1327556221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,3 +199,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a272da06712e69341b1222f634fdb10e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 4513311559441151610, guid: 22dbad092a6e5ec43a23bbf816929bdd, type: 3}

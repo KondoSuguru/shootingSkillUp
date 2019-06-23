@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     float speed = 1f;
-    float trackingSpeed = 0.5f;
+    float trackingSpeed = 0.7f;
     static bool isTracking = false;
+    GameObject nearEnemy;
+
+    private void Start() {
+        //ToEnemyRotate();
+    }
 
     private void Update() {
         TrackingShot();
@@ -35,16 +41,16 @@ public class Bullet : MonoBehaviour {
         GameObject nearEnemy = null;
         float distance = 1000f;
 
-        foreach (var objs in GameObject.FindGameObjectsWithTag("Enemy")) {
+        foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy")) {
             //弾が敵を通り過ぎてたら無視
-            if (transform.position.z > objs.transform.position.z) {
+            if (transform.position.z > enemy.transform.position.z) {
                 break;
             }
-            //プレイヤーとエネミーの距離がより近ければ更新
-            float curDis = Vector3.Distance(transform.position, objs.transform.position);
+            //弾とエネミーの距離がより近ければ更新
+            float curDis = Vector3.Distance(transform.position, enemy.transform.position);
             if (curDis < distance) {
                 distance = curDis;
-                nearEnemy = objs;
+                nearEnemy = enemy;
             }
         }
 
@@ -53,14 +59,24 @@ public class Bullet : MonoBehaviour {
 
     //敵を追尾する弾
     private void TrackingShot() {
-        if (!isTracking) {
-            return;
-        }
+        nearEnemy = SerchMostNearEnemy();
 
-        if (SerchMostNearEnemy() != null) {
-            Vector3 p2e = SerchMostNearEnemy().transform.position - transform.position;
+        if (isTracking && nearEnemy != null) {
+            Vector3 p2e = nearEnemy.transform.position - transform.position;
             p2e.Normalize();
             transform.position += new Vector3(p2e.x * trackingSpeed, 0, 0);
+        }
+    }
+
+    //エネミーの方を向く(未完成)
+    void ToEnemyRotate() {
+        nearEnemy = SerchMostNearEnemy();
+
+        if (nearEnemy != null) {
+            float radian = (float)Math.Atan2(nearEnemy.transform.position.z - transform.position.z, nearEnemy.transform.position.x - transform.position.x);
+            transform.Rotate(0, radian, 0);
+        } else {
+            transform.Rotate(0, 0, 0);
         }
     }
 

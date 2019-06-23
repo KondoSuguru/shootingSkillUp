@@ -1,59 +1,86 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
-    int powerUpCount;
-    int maxCount;
+    int powerUpPoint = 4;
+    const int maxPoint = 5;
+    int variableMaxPoint = maxPoint;
+    bool[] conditionArray;
     BulletGenerate bulletGenerate;
     FloatingBullet floatingBullet;
     PlayerMove playerMove;
     Razer razer;
 
     private void Start() {
-        powerUpCount = 0;
-        maxCount = 5;
         bulletGenerate = GetComponent<BulletGenerate>();
         floatingBullet = GetComponent<FloatingBullet>();
         playerMove = GetComponent<PlayerMove>();
         razer = GetComponent<Razer>();
+        conditionArray = new bool[maxPoint + 1];
     }
 
     private void Update() {
-        if (powerUpCount >= maxCount) {
-            powerUpCount = maxCount;
-        }
-
         PowerUp();
     }
 
+    //プレイヤー強化
     void PowerUp() {
-        if (Input.GetKeyDown(KeyCode.X)) {
-            if (powerUpCount == 1 && !playerMove.IsMaxSpeed()) {
-                playerMove.SetSpeed(2f);
-            } else if (powerUpCount == 2 && !bulletGenerate.IsMaxShotTime()) {
-                bulletGenerate.SetShotTime(0.1f);
-            } else if (powerUpCount == 3 && !bullet.GetTracking()) {
-                bullet.SetTracking(true);
-            } else if (powerUpCount == 4 && !razer.GetRazer()) {
-                razer.SetRazer(true);
-            } else if (powerUpCount == 5 && !floatingBullet.IsMaxCount()) {
-                floatingBullet.GenerateOption();
-            } else { //パワーアップ不能ならリターン
-                return;
+        if (!Input.GetKeyDown(KeyCode.X)) {
+            return;
+        }
+        if (conditionArray[powerUpPoint]) {
+            return;
+        }
+
+        switch (powerUpPoint) {
+            case 1: playerMove.SetSpeed(2f); break;
+            case 2: bulletGenerate.SetShotTime(0.1f); break;
+            case 3: bullet.SetTracking(true); break;
+            case 4: razer.SetRazer(true); break;
+            case 5: floatingBullet.GenerateOption(); break;
+            default: Debug.LogError("PowerUpError"); break;
+        }
+
+        powerUpPoint = 0;
+    }
+
+    //条件配列の更新
+    void ConditionArrayUpdate() {
+        conditionArray = new bool[maxPoint + 1] { //最初のtrueはダミー
+            true, playerMove.IsMaxSpeed(), bulletGenerate.IsMaxShotTime(), bullet.GetTracking(), razer.GetRazer(), floatingBullet.IsMaxCount(),
+        };
+    }
+
+    //ポイントの調整
+    void Point() {
+        for (int i = variableMaxPoint; i != 0; i--) {
+            if (!conditionArray[i]) {
+                variableMaxPoint = i;
+                break;
             }
-            powerUpCount = 0;
+        }
+
+        if (powerUpPoint >= variableMaxPoint) {
+            powerUpPoint = variableMaxPoint;
         }
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Item") {
-            powerUpCount++;
+            powerUpPoint++;
         }
+
+        ConditionArrayUpdate();
+        Point();
     }
 
-    public int GetPowerUpCount() {
-        return powerUpCount;
+    public int GetPowerUpPoint() {
+        return powerUpPoint;
+    }
+    public bool[] GetConditionArray() {
+        return conditionArray;
     }
 }

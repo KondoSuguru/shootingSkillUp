@@ -13,6 +13,6 @@ public class PowerUpPoint : MonoBehaviour {
     }
 
     private void Update() {
-        pointCount.text = "Point " + playerPowerUp.GetPowerUpCount();
+        pointCount.text = "Point " + playerPowerUp.GetPowerUpPoint();
     }
 }
