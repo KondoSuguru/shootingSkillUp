@@ -25,13 +25,13 @@ public class BulletGenerate : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space) && canShot) {
             canShot = false;
             if (tripleShot.GetTriple() && razerScript.GetRazer()) {
-                GenerateTripleRazer();
+                GenerateBullet(tripleRazer, razerObj);
             } else if (tripleShot.GetTriple()) {
-                GenerateTriple();
+                GenerateBullet(tripleBullet, bullet);
             } else if (razerScript.GetRazer()) {
-                GenerateRazer();
+                GenerateBullet(razerObj, razerObj);
             } else {
-                GenerateNormal();
+                GenerateBullet(bullet, bullet);
             }
         }
     }
@@ -49,35 +49,11 @@ public class BulletGenerate : MonoBehaviour {
         }
     }
 
-    //レーザーを生成
-    void GenerateRazer() {
-        razerScript.InitScale();
-        Instantiate(razerObj, transform.position, transform.rotation);
+    //弾の生成
+    void GenerateBullet(GameObject main, GameObject option) {
+        Instantiate(main, transform.position, transform.rotation);
         for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-        }
-    }
-    //トリプルバレット
-    void GenerateTriple() {
-        Instantiate(tripleBullet, transform.position, transform.rotation);
-
-        for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(bullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-        }
-    }
-    //トリプルレーザー
-    void GenerateTripleRazer() {
-        razerScript.InitScale();
-        Instantiate(tripleRazer, transform.position, transform.rotation);
-        for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-        }
-    }
-    void GenerateNormal() {
-        // 弾をプレイヤーと同じ位置/角度で作成
-        Instantiate(bullet, transform.position, transform.rotation);
-        for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(bullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
+            Instantiate(option, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
     }
 

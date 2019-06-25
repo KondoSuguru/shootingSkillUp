@@ -195,6 +195,9 @@ MonoBehaviour:
   razer: {fileID: 4235161652891093052, guid: baa341f67b51f8c4b8b0a0799b544af7, type: 3}
   tripleRazer: {fileID: 4137233583379694619, guid: f6b1907a0026b2f418563a3517658f96,
     type: 3}
+  tripleShot: {fileID: 865836895841284569, guid: f6b1907a0026b2f418563a3517658f96,
+    type: 3}
+  floatingBullet: {fileID: 1024357492}
 --- !u!114 &7413525467977809484
 MonoBehaviour:
   m_ObjectHideFlags: 0

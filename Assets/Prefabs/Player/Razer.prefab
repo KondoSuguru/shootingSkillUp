@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4235161652891093052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 15}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -139,6 +139,9 @@ MonoBehaviour:
   razer: {fileID: 4235161652891093052}
   tripleRazer: {fileID: 4137233583379694619, guid: f6b1907a0026b2f418563a3517658f96,
     type: 3}
+  tripleShot: {fileID: 865836895841284569, guid: f6b1907a0026b2f418563a3517658f96,
+    type: 3}
+  floatingBullet: {fileID: 1024357492, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
 --- !u!82 &-370490260843496963
 AudioSource:
   m_ObjectHideFlags: 0

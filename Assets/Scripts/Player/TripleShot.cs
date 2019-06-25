@@ -5,17 +5,19 @@ using UnityEngine;
 
 public class TripleShot : MonoBehaviour {
     public Bullet bulletScript;
-    Bullet[] bullets;
+    Transform[] bullets;
     static bool enabledTriple = false;
 
     private void Start() {
-        bullets = GetComponentsInChildren<Bullet>();
+        bullets = GetComponentsInChildren<Transform>();
     }
 
     private void Update() {
-        Debug.Log(enabledTriple);
         if (!enabledTriple) {
             return;
+        }
+        if (GetComponentsInChildren<Transform>().Length == 1) { //親オブジェクトだけになったら
+            Destroy(gameObject);
         }
 
         for (int i = 0; i < bullets.Length; i++) {

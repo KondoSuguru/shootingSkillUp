@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour {
     }
 
     private void Update() {
-        TrackingShot();
+        //TrackingShot();
         transform.position += new Vector3(0, 0, speed);
     }
 

@@ -9,9 +9,7 @@ public class FloatingBullet : MonoBehaviour {
     GameObject[] floatingBullets;
     Vector3[] updatePos;
     const float positionX = 2f;
-    //const float positionY = 4f;
-    //const float positionZ = -2f;
-    const float trackingSpeed = 0.02f;
+    const float trackingSpeed = 0.015f;
     const int maxCount = 2;
     static int currentCount = 0;
 
@@ -48,7 +46,7 @@ public class FloatingBullet : MonoBehaviour {
             }
 
             Vector3 curPos2updPos = updatePos[i] - floatingBullets[i].transform.position;
-            curPos2updPos.Normalize();
+            //curPos2updPos.Normalize();
             floatingBullets[i].transform.position += curPos2updPos * playerMove.GetSpeed() * trackingSpeed;
         }
     }

@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour
         moveVector.z = Input.GetAxis("Vertical") * speed;
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
 
+        //二次関数
         //x -= 0.05f;
         //transform.position = new Vector3(x, 0.5f, 3 * x * x + 2 * x + 3);
     }

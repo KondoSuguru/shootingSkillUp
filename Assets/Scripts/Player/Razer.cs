@@ -5,8 +5,15 @@ using UnityEngine;
 public class Razer : MonoBehaviour {
     public GameObject razer;
     public GameObject tripleRazer;
-    Vector3 maxScale = new Vector3(0.1f, 0.1f, 15f);
+    public TripleShot tripleShot;
+    public FloatingBullet floatingBullet;
+    Transform[] tripleRazers;
     static bool enabledRazer = false;
+
+    private void Start() {
+        tripleRazers = tripleRazer.GetComponentsInChildren<Transform>();
+        razer.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+    }
 
     private void Update() {
         if (!enabledRazer) {
@@ -15,13 +22,14 @@ public class Razer : MonoBehaviour {
         ScaleUp();
     }
 
-    void ScaleUp() {
-        if (razer.transform.localScale.z >= maxScale.z) {
-            razer.transform.localScale = maxScale;
-            return;
+    void ScaleUp() { //1本か3本かで分岐
+        if (enabledRazer || floatingBullet.GetCount() > 0) {
+            razer.transform.localScale += new Vector3(0, 0, 0.3f);
+        } else {
+            for (int i = 0; i < tripleRazers.Length; i++) {
+                tripleRazers[i].localScale += new Vector3(0, 0, 0.3f);
+            }
         }
-        razer.transform.localScale += new Vector3(0, 0, 0.3f);
-        tripleRazer.transform.localScale += new Vector3(0, 0, 0.3f);
     }
 
     public void SetRazer(bool set) {
@@ -29,9 +37,5 @@ public class Razer : MonoBehaviour {
     }
     public bool GetRazer() {
         return enabledRazer;
-    }
-    public void InitScale() {
-        razer.transform.localScale = new Vector3(0.1f, 0.1f, 1f);
-        tripleRazer.transform.localScale = new Vector3(0.1f, 0.1f, 1f);
     }
 }

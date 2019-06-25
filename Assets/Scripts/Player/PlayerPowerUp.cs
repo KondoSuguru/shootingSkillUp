@@ -7,7 +7,7 @@ public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
     public TripleShot tripleShot;
     public AudioClip effect;
-    int powerUpPoint = 3;
+    int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
@@ -27,7 +27,6 @@ public class PlayerPowerUp : MonoBehaviour {
         conditionArray = new bool[maxPoint + 1];
         Initialize();
     }
-
     private void Update() {
         ConditionArrayUpdate();
         PowerUp();
@@ -42,7 +41,7 @@ public class PlayerPowerUp : MonoBehaviour {
             return;
         }
 
-        switch (powerUpPoint) { //レーザーと追尾は二者択一
+        switch (powerUpPoint) {
             case 1: playerMove.SetSpeed(2f); break;
             case 2: bulletGenerate.SetShotTime(0.02f); break;
             case 3: tripleShot.SetTriple(true); break;
