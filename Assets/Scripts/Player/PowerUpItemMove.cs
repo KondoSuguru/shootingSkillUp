@@ -23,7 +23,7 @@ public class PowerUpItemMove : MonoBehaviour
         pos += new Vector3(0, 0, -speed);
         transform.position = pos;
 
-        if (pos.z > 5)
+        if (pos.z > 60)
             Destroy(gameObject);
     }
 
