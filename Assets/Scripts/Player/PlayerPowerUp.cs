@@ -35,11 +35,11 @@ public class PlayerPowerUp : MonoBehaviour {
             return;
         }
 
-        switch (powerUpPoint) {
+        switch (powerUpPoint) { //レーザーと追尾は二者択一
             case 1: playerMove.SetSpeed(2f); break;
-            case 2: bulletGenerate.SetShotTime(0.1f); break;
-            case 3: bullet.SetTracking(true); break;
-            case 4: razer.SetRazer(true); break;
+            case 2: bulletGenerate.SetShotTime(0.05f); break;
+            case 3: bullet.SetTracking(true); razer.SetRazer(false); break;
+            case 4: razer.SetRazer(true); bullet.SetTracking(false); break;
             case 5: floatingBullet.GenerateOption(); break;
             default: Debug.LogError("PowerUpError"); break;
         }
