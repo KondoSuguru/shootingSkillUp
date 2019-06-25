@@ -9,6 +9,9 @@ public class TextBGColor : MonoBehaviour {
 
     private void Start() {
         images = GetComponentsInChildren<Image>();
+        for (int i = 0; i < images.Length; i++) {
+            images[i].color = Color.clear;
+        }
     }
 
     private void Update() {

@@ -38,6 +38,10 @@ public class FloatingBullet : MonoBehaviour {
 
     //規定の位置まで移動
     void Move() {
+        if (currentCount == 0) {
+            return;
+        }
+
         for (int i = 0; i < currentCount; i++) {
             if (Vector3.Distance(updatePos[i], floatingBullets[i].transform.position) < 0.1f) {
                 continue;
@@ -71,5 +75,9 @@ public class FloatingBullet : MonoBehaviour {
     }
     public bool IsMaxCount() {
         return currentCount == maxCount ? true : false;
+    }
+    public void InitOption() {
+
+        currentCount = 0;
     }
 }

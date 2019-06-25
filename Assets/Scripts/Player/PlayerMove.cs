@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public float speed = 10.0f; //移動速度
     public float forceMultiplier = 50.0f; //移動速度の入力に対する追従度（大きいほどきびきび動く）
+    float defaultSpeed = 10f;
     private Rigidbody rb;
     float maxSpeed = 20f;
     //float x = 3;
@@ -36,5 +37,8 @@ public class PlayerMove : MonoBehaviour
     }
     public bool IsMaxSpeed() {
         return speed >= maxSpeed ? true : false;
+    }
+    public void InitSpeed() {
+        speed = defaultSpeed;
     }
 }

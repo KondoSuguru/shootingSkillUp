@@ -10,6 +10,7 @@ public class BulletGenerate : MonoBehaviour {
     public Razer razerScript;
     float time = 0f;
     float shotTime = 0.5f;
+    float defaultShotTime = 0.5f;
     bool canShot = false;
 
     private void Update() {
@@ -65,5 +66,8 @@ public class BulletGenerate : MonoBehaviour {
     }
     public bool IsMaxShotTime() {
         return shotTime <= 0.11f ? true : false;
+    }
+    public void InitShotTime() {
+        shotTime = defaultShotTime;
     }
 }

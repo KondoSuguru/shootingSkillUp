@@ -20,7 +20,7 @@ public class PlayerPowerUp : MonoBehaviour {
         playerMove = GetComponent<PlayerMove>();
         razer = GetComponent<Razer>();
         conditionArray = new bool[maxPoint + 1];
-        InitializeConditionArray();
+        Initialize();
     }
 
     private void Update() {
@@ -48,11 +48,19 @@ public class PlayerPowerUp : MonoBehaviour {
         powerUpPoint = 0;
     }
 
-    void InitializeConditionArray() {
+    //すべての初期化
+    void Initialize() {
         for (int i = 0; i < conditionArray.Length; i++) {
             conditionArray[i] = false;
         }
         conditionArray[0] = true;
+
+        playerMove.InitSpeed();
+        bulletGenerate.InitShotTime();
+        bullet.SetTracking(false);
+        razer.SetRazer(false);
+        floatingBullet.InitOption();
+        Debug.Log(floatingBullet.GetCount());
     }
 
     //条件配列の更新

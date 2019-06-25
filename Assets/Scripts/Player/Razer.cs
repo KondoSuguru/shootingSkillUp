@@ -20,7 +20,6 @@ public class Razer : MonoBehaviour {
             return;
         }
         razer.transform.localScale += new Vector3(0, 0, 0.3f);
-        Debug.Log(razer.transform.localScale);
     }
 
     public void SetRazer(bool set) {
