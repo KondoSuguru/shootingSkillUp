@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
-    int powerUpPoint = 4;
+    int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
