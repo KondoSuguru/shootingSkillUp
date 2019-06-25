@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5023232986845189709
+--- !u!1 &4331509799918873746
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5023232986845189707}
-  - component: {fileID: 5023232986845189704}
-  - component: {fileID: 5023232986845189705}
-  - component: {fileID: 5023232986845189710}
-  - component: {fileID: 5023232986845189711}
-  - component: {fileID: 5023232986845189708}
-  - component: {fileID: 4045736061651119520}
-  - component: {fileID: -3708214648697405359}
+  - component: {fileID: 5135258638877130859}
+  - component: {fileID: 6929596649211679451}
+  - component: {fileID: 9153684339182811322}
+  - component: {fileID: 5290526095947645832}
+  - component: {fileID: 1408428452140064020}
+  - component: {fileID: 1830754834825432564}
+  - component: {fileID: 6822148413504663850}
+  - component: {fileID: 2528025570837721279}
   m_Layer: 0
-  m_Name: ZigzagEnemy
+  m_Name: DragonHead
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5023232986845189707
+--- !u!4 &5135258638877130859
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.5, z: 55}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_GameObject: {fileID: 4331509799918873746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &5023232986845189704
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6929596649211679451
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
+  m_GameObject: {fileID: 4331509799918873746}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5023232986845189705
+--- !u!23 &9153684339182811322
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
+  m_GameObject: {fileID: 4331509799918873746}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 237029bedde0ba44d8ec4d58683548c2, type: 2}
+  - {fileID: 2100000, guid: 804b28902f714ae4887732cd71741315, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,41 +82,26 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5023232986845189710
+--- !u!135 &5290526095947645832
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
+  m_GameObject: {fileID: 4331509799918873746}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5023232986845189711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f209a56e5b98e0846a091eb4e4fee42a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.1
-  period: 3
-  amplitude: 0.1
---- !u!54 &5023232986845189708
+--- !u!54 &1408428452140064020
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
+  m_GameObject: {fileID: 4331509799918873746}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -124,37 +109,52 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4045736061651119520
+--- !u!114 &1830754834825432564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
+  m_GameObject: {fileID: 4331509799918873746}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b20160d10a51bd04a8c18d7ae7a48c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
-  DropRate: 20
+  hp: 10
+  DropRate: 100
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
   destroyEffect: {fileID: 6259176189907395978, guid: f7de9a5ce74bd2b42889a52fd51f9d9c,
     type: 3}
---- !u!114 &-3708214648697405359
+--- !u!114 &6822148413504663850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023232986845189709}
+  m_GameObject: {fileID: 4331509799918873746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f209a56e5b98e0846a091eb4e4fee42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.05
+  period: 3
+  amplitude: 0.05
+--- !u!114 &2528025570837721279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4331509799918873746}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f6a8aa25459f9844a88018b2af8b79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 283778333787949128, guid: eadc85b093a59f841ba3fb1fed26ba96, type: 3}
+  bullet: {fileID: 283778333787949128, guid: d00c96a2561559f45b3336e57e06535b, type: 3}
   shotTime: 2
-  canShot: 0
+  canShot: 1
