@@ -8,7 +8,7 @@ public class FloatingBullet : MonoBehaviour {
     public PlayerMove playerMove;
     GameObject[] floatingBullets;
     Vector3[] updatePos;
-    const float positionX = 2f;
+    const float positionX = 3f;
     //const float positionY = 4f;
     //const float positionZ = -2f;
     const float trackingSpeed = 0.02f;

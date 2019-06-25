@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
-    public TripleShot tripleShot;
     public AudioClip effect;
-    int powerUpPoint = 3;
+    int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
@@ -44,9 +43,9 @@ public class PlayerPowerUp : MonoBehaviour {
 
         switch (powerUpPoint) { //レーザーと追尾は二者択一
             case 1: playerMove.SetSpeed(2f); break;
-            case 2: bulletGenerate.SetShotTime(0.02f); break;
-            case 3: tripleShot.SetTriple(true); break;
-            case 4: razer.SetRazer(true); break;
+            case 2: bulletGenerate.SetShotTime(0.05f); break;
+            case 3: bullet.SetTracking(true); razer.SetRazer(false); break;
+            case 4: razer.SetRazer(true); bullet.SetTracking(false); break;
             case 5: floatingBullet.GenerateOption(); break;
             default: Debug.LogError("PowerUpError"); break;
         }
@@ -65,7 +64,6 @@ public class PlayerPowerUp : MonoBehaviour {
         playerMove.InitSpeed();
         bulletGenerate.InitShotTime();
         bullet.SetTracking(false);
-        tripleShot.SetTriple(false);
         razer.SetRazer(false);
         floatingBullet.InitOption();
     }
@@ -73,7 +71,7 @@ public class PlayerPowerUp : MonoBehaviour {
     //条件配列の更新
     void ConditionArrayUpdate() {
         conditionArray = new bool[maxPoint + 1] { //最初のtrueはダミー
-            true, playerMove.IsMaxSpeed(), bulletGenerate.IsMaxShotTime(), /*bullet.GetTracking()*/tripleShot.GetTriple(), razer.GetRazer(), floatingBullet.IsMaxCount(),
+            true, playerMove.IsMaxSpeed(), bulletGenerate.IsMaxShotTime(), bullet.GetTracking(), razer.GetRazer(), floatingBullet.IsMaxCount(),
         };
     }
 

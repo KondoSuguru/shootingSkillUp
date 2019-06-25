@@ -8,9 +8,6 @@ public class BulletGenerate : MonoBehaviour {
     public FloatingBullet floatingBullet;
     public GameObject razerObj;
     public Razer razerScript;
-    public GameObject tripleBullet;
-    public TripleShot tripleShot;
-    public GameObject tripleRazer;
     float time = 0f;
     float shotTime = 0.5f;
     const float defaultShotTime = 0.5f;
@@ -24,11 +21,7 @@ public class BulletGenerate : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Space) && canShot) {
             canShot = false;
-            if (tripleShot.GetTriple() && razerScript.GetRazer()) {
-                GenerateTripleRazer();
-            } else if (tripleShot.GetTriple()) {
-                GenerateTriple();
-            } else if (razerScript.GetRazer()) {
+            if (razerScript.GetRazer()) {
                 GenerateRazer();
             } else {
                 GenerateNormal();
@@ -57,22 +50,6 @@ public class BulletGenerate : MonoBehaviour {
             Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
     }
-    //トリプルバレット
-    void GenerateTriple() {
-        Instantiate(tripleBullet, transform.position, transform.rotation);
-
-        for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(bullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-        }
-    }
-    //トリプルレーザー
-    void GenerateTripleRazer() {
-        razerScript.InitScale();
-        Instantiate(tripleRazer, transform.position, transform.rotation);
-        for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-        }
-    }
     void GenerateNormal() {
         // 弾をプレイヤーと同じ位置/角度で作成
         Instantiate(bullet, transform.position, transform.rotation);
@@ -83,15 +60,15 @@ public class BulletGenerate : MonoBehaviour {
 
     public void SetShotTime(float set) {
         shotTime -= set;
-        if (shotTime < 0.25f) {
-            shotTime = 0.25f;
+        if (shotTime < 0.1f) {
+            shotTime = 0.1f;
         }
     }
     public float GetShotTime() {
         return shotTime;
     }
     public bool IsMaxShotTime() {
-        return shotTime <= 0.25f ? true : false;
+        return shotTime <= 0.11f ? true : false;
     }
     public void InitShotTime() {
         shotTime = defaultShotTime;
