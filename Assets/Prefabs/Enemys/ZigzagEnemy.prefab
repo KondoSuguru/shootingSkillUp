@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  DropRate: 100
+  DropRate: 20
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
 --- !u!114 &-3708214648697405359
 MonoBehaviour:
@@ -156,4 +156,3 @@ MonoBehaviour:
   bullet: {fileID: 283778333787949128, guid: eadc85b093a59f841ba3fb1fed26ba96, type: 3}
   shotTime: 2
   canShot: 0
-  target: {fileID: 0}

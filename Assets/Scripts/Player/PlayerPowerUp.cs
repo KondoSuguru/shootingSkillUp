@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
+    public AudioClip effect;
     int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
@@ -13,17 +14,21 @@ public class PlayerPowerUp : MonoBehaviour {
     FloatingBullet floatingBullet;
     PlayerMove playerMove;
     Razer razer;
+    AudioSource audioSource;
 
     private void Start() {
         bulletGenerate = GetComponent<BulletGenerate>();
         floatingBullet = GetComponent<FloatingBullet>();
         playerMove = GetComponent<PlayerMove>();
         razer = GetComponent<Razer>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = effect;
         conditionArray = new bool[maxPoint + 1];
         Initialize();
     }
 
     private void Update() {
+        ConditionArrayUpdate();
         PowerUp();
     }
 
@@ -45,6 +50,7 @@ public class PlayerPowerUp : MonoBehaviour {
             default: Debug.LogError("PowerUpError"); break;
         }
 
+        audioSource.Play();
         powerUpPoint = 0;
     }
 
@@ -60,7 +66,6 @@ public class PlayerPowerUp : MonoBehaviour {
         bullet.SetTracking(false);
         razer.SetRazer(false);
         floatingBullet.InitOption();
-        Debug.Log(floatingBullet.GetCount());
     }
 
     //条件配列の更新
