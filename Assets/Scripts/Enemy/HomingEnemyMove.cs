@@ -27,31 +27,7 @@ public class HomingEnemyMove : MonoBehaviour
         }
         else
         {
-            if (target.transform.position.z < transform.position.z)
-            {
-                //ターゲットへのベクトル
-                Vector3 vecTarget = target.transform.position - transform.position;
-                //自身の正面方向のベクトル
-                Vector3 vecForward = transform.TransformDirection(Vector3.forward);
-                //ターゲットまでの角度
-                float angleDiff = Vector3.Angle(vecForward, vecTarget);
-                //回転角度
-                float angleAdd = rotSpeed * Time.deltaTime;
-                //ターゲットへ向けるクォータニオン
-                Quaternion rotTarget = Quaternion.LookRotation(vecTarget);
-                if (angleDiff <= angleAdd)
-                {
-                    //回転角度内ならそのまま回転
-                    transform.rotation = rotTarget;
-                }
-                else
-                {
-                    //回転角度外ならある程度回転
-                    float t = angleAdd / angleDiff;
-                    transform.rotation = Quaternion.Slerp(transform.rotation, rotTarget, t);
-                }
-            }
-            pos += transform.TransformDirection(Vector3.forward) * speed;
+            StartUpdate(ref pos);
         }
         transform.position = pos;
     }
@@ -62,5 +38,34 @@ public class HomingEnemyMove : MonoBehaviour
         {
             isStart = true;
         }
+    }
+
+    private void StartUpdate(ref Vector3 pos)
+    {
+        if (target.transform.position.z < transform.position.z)
+        {
+            //ターゲットへのベクトル
+            Vector3 vecTarget = target.transform.position - transform.position;
+            //自身の正面方向のベクトル
+            Vector3 vecForward = transform.TransformDirection(Vector3.forward);
+            //ターゲットまでの角度
+            float angleDiff = Vector3.Angle(vecForward, vecTarget);
+            //回転角度
+            float angleAdd = rotSpeed * Time.deltaTime;
+            //ターゲットへ向けるクォータニオン
+            Quaternion rotTarget = Quaternion.LookRotation(vecTarget);
+            if (angleDiff <= angleAdd)
+            {
+                //回転角度内ならそのまま回転
+                transform.rotation = rotTarget;
+            }
+            else
+            {
+                //回転角度外ならある程度回転
+                float t = angleAdd / angleDiff;
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotTarget, t);
+            }
+        }
+        pos += transform.TransformDirection(Vector3.forward) * speed;
     }
 }
