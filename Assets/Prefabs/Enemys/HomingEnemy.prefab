@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  DropRate: 30
+  DropRate: 20
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
   destroyEffect: {fileID: 6259176189907395978, guid: f7de9a5ce74bd2b42889a52fd51f9d9c,
     type: 3}

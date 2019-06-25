@@ -10,8 +10,11 @@ public class BulletGenerate : MonoBehaviour {
     public Razer razerScript;
     float time = 0f;
     float shotTime = 0.5f;
-    float defaultShotTime = 0.5f;
+    const float defaultShotTime = 0.5f;
     bool canShot = false;
+
+    private void Start() {
+    }
 
     private void Update() {
         CanShot();

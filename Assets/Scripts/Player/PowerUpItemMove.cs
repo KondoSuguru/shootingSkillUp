@@ -5,11 +5,14 @@ using UnityEngine;
 public class PowerUpItemMove : MonoBehaviour
 {
     public float speed = 0.1f;
+    public AudioClip effect;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = effect;
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class PowerUpItemMove : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            audioSource.Play();
             Destroy(gameObject);
         }
 
