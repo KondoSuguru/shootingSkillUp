@@ -8,6 +8,8 @@ public class EnemyHitpoint : MonoBehaviour
     public int DropRate = 30;
     public GameObject Item;
 
+    public GameObject destroyEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class EnemyHitpoint : MonoBehaviour
             {
                 Instantiate(Item, transform.position, Item.transform.rotation);
             }
+            Instantiate(destroyEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
