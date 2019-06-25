@@ -20,6 +20,7 @@ public class PlayerPowerUp : MonoBehaviour {
         playerMove = GetComponent<PlayerMove>();
         razer = GetComponent<Razer>();
         conditionArray = new bool[maxPoint + 1];
+        InitializeConditionArray();
     }
 
     private void Update() {
@@ -45,6 +46,13 @@ public class PlayerPowerUp : MonoBehaviour {
         }
 
         powerUpPoint = 0;
+    }
+
+    void InitializeConditionArray() {
+        for (int i = 0; i < conditionArray.Length; i++) {
+            conditionArray[i] = false;
+        }
+        conditionArray[0] = true;
     }
 
     //条件配列の更新

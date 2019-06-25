@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Razer : MonoBehaviour {
-    public Bullet bullet;
     public GameObject razer;
     Vector3 maxScale = new Vector3(0.1f, 0.1f, 15f);
     static bool enabledRazer = false;
@@ -20,7 +19,8 @@ public class Razer : MonoBehaviour {
             razer.transform.localScale = maxScale;
             return;
         }
-        razer.transform.localScale += new Vector3(0, 0, 0.1f);
+        razer.transform.localScale += new Vector3(0, 0, 0.3f);
+        Debug.Log(razer.transform.localScale);
     }
 
     public void SetRazer(bool set) {
@@ -30,6 +30,6 @@ public class Razer : MonoBehaviour {
         return enabledRazer;
     }
     public void InitScale() {
-        razer.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        razer.transform.localScale = new Vector3(0.1f, 0.1f, 1f);
     }
 }

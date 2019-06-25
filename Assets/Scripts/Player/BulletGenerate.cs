@@ -40,11 +40,11 @@ public class BulletGenerate : MonoBehaviour {
 
     //レーザーを生成
     void GenerateRazer() {
+        razerScript.InitScale();
         Instantiate(razerObj, transform.position, transform.rotation);
         for (int i = 0; i < floatingBullet.GetCount(); i++) {
             Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
-        razerScript.InitScale();
     }
     void GenerateNormal() {
         // 弾をプレイヤーと同じ位置/角度で作成

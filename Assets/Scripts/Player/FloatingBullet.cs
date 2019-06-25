@@ -11,7 +11,7 @@ public class FloatingBullet : MonoBehaviour {
     const float positionX = 3f;
     //const float positionY = 4f;
     //const float positionZ = -2f;
-    const float trackingSpeed = 0.015f;
+    const float trackingSpeed = 0.02f;
     const int maxCount = 2;
     static int currentCount = 0;
 
