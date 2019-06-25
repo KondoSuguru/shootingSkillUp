@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  backTime: 2
 --- !u!54 &2059524696617761361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  DropRate: 100
+  DropRate: 10
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
 --- !u!114 &2577649171717918948
 MonoBehaviour:
