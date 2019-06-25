@@ -6,9 +6,10 @@ public class PlayerMove : MonoBehaviour
 {
     public float speed = 10.0f; //移動速度
     public float forceMultiplier = 50.0f; //移動速度の入力に対する追従度（大きいほどきびきび動く）
+    float defaultSpeed = 10f;
     private Rigidbody rb;
     float maxSpeed = 20f;
-
+    //float x = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,9 @@ public class PlayerMove : MonoBehaviour
         moveVector.x = Input.GetAxis("Horizontal") * speed;
         moveVector.z = Input.GetAxis("Vertical") * speed;
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
+
+        //x -= 0.05f;
+        //transform.position = new Vector3(x, 0.5f, 3 * x * x + 2 * x + 3);
     }
     
     public void SetSpeed(float set) {
@@ -33,5 +37,8 @@ public class PlayerMove : MonoBehaviour
     }
     public bool IsMaxSpeed() {
         return speed >= maxSpeed ? true : false;
+    }
+    public void InitSpeed() {
+        speed = defaultSpeed;
     }
 }

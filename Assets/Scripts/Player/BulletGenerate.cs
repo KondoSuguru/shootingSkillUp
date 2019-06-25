@@ -10,6 +10,7 @@ public class BulletGenerate : MonoBehaviour {
     public Razer razerScript;
     float time = 0f;
     float shotTime = 0.5f;
+    float defaultShotTime = 0.5f;
     bool canShot = false;
 
     private void Update() {
@@ -40,11 +41,11 @@ public class BulletGenerate : MonoBehaviour {
 
     //レーザーを生成
     void GenerateRazer() {
+        razerScript.InitScale();
         Instantiate(razerObj, transform.position, transform.rotation);
         for (int i = 0; i < floatingBullet.GetCount(); i++) {
             Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
-        razerScript.InitScale();
     }
     void GenerateNormal() {
         // 弾をプレイヤーと同じ位置/角度で作成
@@ -65,5 +66,8 @@ public class BulletGenerate : MonoBehaviour {
     }
     public bool IsMaxShotTime() {
         return shotTime <= 0.11f ? true : false;
+    }
+    public void InitShotTime() {
+        shotTime = defaultShotTime;
     }
 }

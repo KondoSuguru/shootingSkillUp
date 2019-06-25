@@ -11,7 +11,7 @@ public class FloatingBullet : MonoBehaviour {
     const float positionX = 3f;
     //const float positionY = 4f;
     //const float positionZ = -2f;
-    const float trackingSpeed = 0.015f;
+    const float trackingSpeed = 0.02f;
     const int maxCount = 2;
     static int currentCount = 0;
 
@@ -38,6 +38,10 @@ public class FloatingBullet : MonoBehaviour {
 
     //規定の位置まで移動
     void Move() {
+        if (currentCount == 0) {
+            return;
+        }
+
         for (int i = 0; i < currentCount; i++) {
             if (Vector3.Distance(updatePos[i], floatingBullets[i].transform.position) < 0.1f) {
                 continue;
@@ -71,5 +75,9 @@ public class FloatingBullet : MonoBehaviour {
     }
     public bool IsMaxCount() {
         return currentCount == maxCount ? true : false;
+    }
+    public void InitOption() {
+
+        currentCount = 0;
     }
 }
