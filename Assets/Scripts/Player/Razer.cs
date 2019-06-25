@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Razer : MonoBehaviour {
     public GameObject razer;
+    public GameObject tripleRazer;
     Vector3 maxScale = new Vector3(0.1f, 0.1f, 15f);
     static bool enabledRazer = false;
 
@@ -20,6 +21,7 @@ public class Razer : MonoBehaviour {
             return;
         }
         razer.transform.localScale += new Vector3(0, 0, 0.3f);
+        tripleRazer.transform.localScale += new Vector3(0, 0, 0.3f);
     }
 
     public void SetRazer(bool set) {
@@ -30,5 +32,6 @@ public class Razer : MonoBehaviour {
     }
     public void InitScale() {
         razer.transform.localScale = new Vector3(0.1f, 0.1f, 1f);
+        tripleRazer.transform.localScale = new Vector3(0.1f, 0.1f, 1f);
     }
 }
