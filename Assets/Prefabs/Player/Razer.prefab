@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   razer: {fileID: 4235161652891093052}
+  tripleRazer: {fileID: 4137233583379694619, guid: f6b1907a0026b2f418563a3517658f96,
+    type: 3}
 --- !u!82 &-370490260843496963
 AudioSource:
   m_ObjectHideFlags: 0
