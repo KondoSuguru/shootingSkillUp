@@ -9,7 +9,7 @@ public class BulletGenerate : MonoBehaviour {
     public GameObject razerObj;
     public Razer razerScript;
     float time = 0f;
-    float shotTime = 1.0f;
+    float shotTime = 0.5f;
     bool canShot = false;
 
     private void Update() {
