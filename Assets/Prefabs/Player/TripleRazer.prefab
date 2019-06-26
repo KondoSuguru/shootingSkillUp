@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1507451679684855089}
-  - component: {fileID: 865836895841284569}
-  - component: {fileID: 2941759624502432607}
   m_Layer: 0
   m_Name: TripleRazer
   m_TagString: Razer
@@ -27,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4137233583379694619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 15.3}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 5942821188745825917}
   - {fileID: 2208259840296397811}
@@ -35,32 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &865836895841284569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4137233583379694619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699b9a566b21c704ba29379592485baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletScript: {fileID: 4513311559441151610, guid: 22dbad092a6e5ec43a23bbf816929bdd,
-    type: 3}
---- !u!114 &2941759624502432607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4137233583379694619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 009a047b2fe2edd4cbcc82561f4f8297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2621941101993305035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,6 +44,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Razer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+        type: 3}
+      propertyPath: tripleRazer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+        type: 3}
+      propertyPath: tripleShot
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -96,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.2588191
+      value: 0.13052616
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -106,7 +88,7 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -121,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -131,17 +113,17 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 15.3
+      value: 33.099964
       objectReference: {fileID: 0}
-    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
-      propertyPath: tripleRazer
-      value: 
+      propertyPath: m_LocalScale.x
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
-      propertyPath: tripleShot
-      value: 
+      propertyPath: m_LocalScale.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baa341f67b51f8c4b8b0a0799b544af7, type: 3}
@@ -163,6 +145,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Razer
       objectReference: {fileID: 0}
+    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+        type: 3}
+      propertyPath: tripleRazer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+        type: 3}
+      propertyPath: tripleShot
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -221,17 +213,17 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 15.3
+      value: 33.099964
       objectReference: {fileID: 0}
-    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
-      propertyPath: tripleRazer
-      value: 
+      propertyPath: m_LocalScale.x
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
-      propertyPath: tripleShot
-      value: 
+      propertyPath: m_LocalScale.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baa341f67b51f8c4b8b0a0799b544af7, type: 3}
@@ -252,6 +244,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Razer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+        type: 3}
+      propertyPath: tripleRazer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+        type: 3}
+      propertyPath: tripleShot
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -276,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.258819
+      value: -0.13052624
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -286,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659259
+      value: 0.9914449
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -301,7 +303,7 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -30
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
@@ -311,17 +313,17 @@ PrefabInstance:
     - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 15.3
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
-      propertyPath: tripleRazer
-      value: 
+      propertyPath: m_LocalScale.x
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7,
+    - target: {fileID: 4235161652891093048, guid: baa341f67b51f8c4b8b0a0799b544af7,
         type: 3}
-      propertyPath: tripleShot
-      value: 
+      propertyPath: m_LocalScale.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baa341f67b51f8c4b8b0a0799b544af7, type: 3}

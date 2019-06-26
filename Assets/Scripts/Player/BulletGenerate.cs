@@ -5,18 +5,21 @@ using UnityEngine;
 
 public class BulletGenerate : MonoBehaviour {
     public GameObject bullet;
-    public FloatingBullet floatingBullet;
-    public GameObject razerObj;
-    public Razer razerScript;
+    public GameObject razer;
     public GameObject tripleBullet;
-    public TripleShot tripleShot;
     public GameObject tripleRazer;
     float time = 0f;
     float shotTime = 0.5f;
     const float defaultShotTime = 0.5f;
     bool canShot = false;
+    FloatingBullet floatingBullet;
+    TripleShot tripleShot;
+    Razer razerScript;
 
     private void Start() {
+        floatingBullet = GetComponent<FloatingBullet>();
+        tripleShot = GetComponent<TripleShot>();
+        razerScript = razer.GetComponent<Razer>();
     }
 
     private void Update() {
@@ -25,11 +28,11 @@ public class BulletGenerate : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space) && canShot) {
             canShot = false;
             if (tripleShot.GetTriple() && razerScript.GetRazer()) {
-                GenerateBullet(tripleRazer, razerObj);
+                GenerateBullet(tripleRazer, razer);
             } else if (tripleShot.GetTriple()) {
                 GenerateBullet(tripleBullet, bullet);
             } else if (razerScript.GetRazer()) {
-                GenerateBullet(razerObj, razerObj);
+                GenerateBullet(razer, razer);
             } else {
                 GenerateBullet(bullet, bullet);
             }
@@ -50,10 +53,10 @@ public class BulletGenerate : MonoBehaviour {
     }
 
     //弾の生成
-    void GenerateBullet(GameObject main, GameObject option) {
-        Instantiate(main, transform.position, transform.rotation);
+    void GenerateBullet(GameObject playerBullet, GameObject optionBullet) {
+        Instantiate(playerBullet, transform.position, transform.rotation);
         for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(option, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
+            Instantiate(optionBullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
     }
 
