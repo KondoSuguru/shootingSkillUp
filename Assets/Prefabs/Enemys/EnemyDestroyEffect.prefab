@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7411825793225772950}
   - component: {fileID: 2941918651586827464}
   - component: {fileID: 4608737090924301792}
+  - component: {fileID: -5673809254882818579}
   m_Layer: 0
   m_Name: EnemyDestroyEffect
   m_TagString: Untagged
@@ -4810,3 +4811,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-5673809254882818579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259176189907395978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1427e2d9e5b88c343a5608a6e3f34c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteTime: 3
