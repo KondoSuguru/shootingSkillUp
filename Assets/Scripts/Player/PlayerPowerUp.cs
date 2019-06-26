@@ -7,7 +7,7 @@ public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
     public AudioClip effect;
     public Razer razer;
-    int powerUpPoint = 3;
+    int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
@@ -26,13 +26,8 @@ public class PlayerPowerUp : MonoBehaviour {
         audioSource.clip = effect;
         conditionArray = new bool[maxPoint + 1];
         Initialize();
-
-        //tripleShot.SetTriple(true);
-        razer.SetRazer(true);
-        floatingBullet.GenerateOption();
     }
     private void Update() {
-        //ConditionArrayUpdate();
         PowerUp();
     }
 
