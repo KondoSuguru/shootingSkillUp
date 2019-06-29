@@ -7,7 +7,7 @@ public class EnemyHitpoint : MonoBehaviour
     public int hp = 1;
     public int DropRate = 30;
     public GameObject Item;
-
+    public ScoreUI scoreUI;
     public GameObject destroyEffect;
 
     // Start is called before the first frame update
@@ -28,6 +28,8 @@ public class EnemyHitpoint : MonoBehaviour
             }
             Instantiate(destroyEffect, transform.position, transform.rotation);
             Destroy(gameObject);
+
+            scoreUI.SetScore(10);
         }
     }
 

@@ -23,13 +23,14 @@ public class PlayerMove : MonoBehaviour
         Vector3 moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal") * speed;
         moveVector.z = Input.GetAxis("Vertical") * speed;
+        //moveVector.Normalize();
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
 
         //二次関数
         //x -= 0.05f;
         //transform.position = new Vector3(x, 0.5f, 3 * x * x + 2 * x + 3);
     }
-    
+
     public void SetSpeed(float set) {
         speed += set;
     }

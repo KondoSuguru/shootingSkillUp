@@ -6,6 +6,7 @@ using UnityEngine;
 public class conami : MonoBehaviour {
     KeyCode[] conamiCommand;
     int currentNum;
+    bool enabledConami = false;
 
     void Awake() {
         conamiCommand = new KeyCode[] {
@@ -17,7 +18,6 @@ public class conami : MonoBehaviour {
 
     void Update() {
         DownKeyCheck();
-        LightUp();
     }
 
     void DownKeyCheck() {
@@ -32,8 +32,8 @@ public class conami : MonoBehaviour {
         }
     }
 
-    void LightUp() {
-        if (currentNum == 10) {
-        }
+    public bool EnabledConami() {
+        enabledConami = currentNum == 10;
+        return enabledConami;
     }
 }

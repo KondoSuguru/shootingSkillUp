@@ -57,4 +57,8 @@ public class PlayerHitpoint : MonoBehaviour
             isInvincible = false;
         }
     }
+
+    public int GetHP() {
+        return hp;
+    }
 }
