@@ -10,10 +10,17 @@ public class TopScoreUI : MonoBehaviour {
     const string path = "@../../Assets/Prefabs/UI/TopScore.txt";
     static int topScore;
 
+    ~TopScoreUI() {
+        if (scoreUI.GetScore() > topScore) {
+            File.WriteAllText(path, scoreUI.GetScore().ToString());
+            Debug.Log("デストラクタ");
+        }
+    }
+
     void Start() {
         topScoreText = GetComponent<Text>();
 
-        using(StreamReader sr = File.OpenText(path)) {
+        using (StreamReader sr = File.OpenText(path)) {
             string s;
             while ((s = sr.ReadLine()) != null) {
                 topScore = int.Parse(s);
@@ -23,14 +30,8 @@ public class TopScoreUI : MonoBehaviour {
     }
 
     void Update() {
-        //TODO:スコアがトップスコアを超すたびにファイルに書き込んでいるため無駄が多い、重い
         if (scoreUI.GetScore() > topScore) {
             topScoreText.text = "TopScore : " + scoreUI.GetScore();
-
-            File.WriteAllText(path, scoreUI.GetScore().ToString());
-            //using (StreamWriter sw = File.CreateText(path)) {
-            //    sw.WriteLine(scoreUI.GetScore());
-            //}
         }
     }
 }
