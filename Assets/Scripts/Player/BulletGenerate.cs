@@ -8,6 +8,9 @@ public class BulletGenerate : MonoBehaviour {
     public FloatingBullet floatingBullet;
     public GameObject razerObj;
     public Razer razerScript;
+    public GameObject tripleBullet;
+    public TripleShot tripleShot;
+    public GameObject tripleRazer;
     float time = 0f;
     float shotTime = 0.5f;
     const float defaultShotTime = 0.5f;
@@ -21,10 +24,14 @@ public class BulletGenerate : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Space) && canShot) {
             canShot = false;
-            if (razerScript.GetRazer()) {
-                GenerateRazer();
+            if (tripleShot.GetTriple() && razerScript.GetRazer()) {
+                GenerateBullet(tripleRazer, razerObj);
+            } else if (tripleShot.GetTriple()) {
+                GenerateBullet(tripleBullet, bullet);
+            } else if (razerScript.GetRazer()) {
+                GenerateBullet(razerObj, razerObj);
             } else {
-                GenerateNormal();
+                GenerateBullet(bullet, bullet);
             }
         }
     }
@@ -42,33 +49,25 @@ public class BulletGenerate : MonoBehaviour {
         }
     }
 
-    //レーザーを生成
-    void GenerateRazer() {
-        razerScript.InitScale();
-        Instantiate(razerObj, transform.position, transform.rotation);
+    //弾の生成
+    void GenerateBullet(GameObject main, GameObject option) {
+        Instantiate(main, transform.position, transform.rotation);
         for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(razerObj, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
-        }
-    }
-    void GenerateNormal() {
-        // 弾をプレイヤーと同じ位置/角度で作成
-        Instantiate(bullet, transform.position, transform.rotation);
-        for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(bullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
+            Instantiate(option, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
         }
     }
 
     public void SetShotTime(float set) {
         shotTime -= set;
-        if (shotTime < 0.1f) {
-            shotTime = 0.1f;
+        if (shotTime < 0.25f) {
+            shotTime = 0.25f;
         }
     }
     public float GetShotTime() {
         return shotTime;
     }
     public bool IsMaxShotTime() {
-        return shotTime <= 0.11f ? true : false;
+        return shotTime <= 0.25f ? true : false;
     }
     public void InitShotTime() {
         shotTime = defaultShotTime;
