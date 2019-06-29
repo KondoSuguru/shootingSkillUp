@@ -51,11 +51,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865717623187409164}
     m_Modifications:
-    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
-        type: 3}
-      propertyPath: m_Name
-      value: HomingEnemy (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397977, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -111,10 +106,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: HomingEnemy (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397981, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: DropRate
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f72648407bbdc499c803caf70c9c0d, type: 3}
@@ -125,11 +125,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865717623187409164}
     m_Modifications:
-    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
-        type: 3}
-      propertyPath: m_Name
-      value: HomingEnemy
-      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397977, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -185,10 +180,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: HomingEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397981, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: DropRate
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f72648407bbdc499c803caf70c9c0d, type: 3}
@@ -199,11 +199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865717623187409164}
     m_Modifications:
-    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
-        type: 3}
-      propertyPath: m_Name
-      value: HomingEnemy (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397977, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -259,10 +254,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: HomingEnemy (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397981, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: DropRate
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f72648407bbdc499c803caf70c9c0d, type: 3}
@@ -273,11 +273,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865717623187409164}
     m_Modifications:
-    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
-        type: 3}
-      propertyPath: m_Name
-      value: HomingEnemy (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397977, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -333,10 +328,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: HomingEnemy (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397981, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: DropRate
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f72648407bbdc499c803caf70c9c0d, type: 3}
@@ -347,11 +347,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865717623187409164}
     m_Modifications:
-    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
-        type: 3}
-      propertyPath: m_Name
-      value: HomingEnemy (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397977, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,10 +402,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: HomingEnemy (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397981, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: DropRate
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f72648407bbdc499c803caf70c9c0d, type: 3}
@@ -421,11 +421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6865717623187409164}
     m_Modifications:
-    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
-        type: 3}
-      propertyPath: m_Name
-      value: HomingEnemy (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397977, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,10 +476,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2875829496430397971, guid: b3f72648407bbdc499c803caf70c9c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: HomingEnemy (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2875829496430397981, guid: b3f72648407bbdc499c803caf70c9c0d,
         type: 3}
       propertyPath: DropRate
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f72648407bbdc499c803caf70c9c0d, type: 3}
@@ -495,11 +495,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7858209022727889841}
     m_Modifications:
-    - target: {fileID: 3125461778907042261, guid: 43a3752348aaa3646852b7f2a4315009,
-        type: 3}
-      propertyPath: m_Name
-      value: EnemyGroup
-      objectReference: {fileID: 0}
     - target: {fileID: 3086411646164360086, guid: 43a3752348aaa3646852b7f2a4315009,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -554,6 +549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125461778907042261, guid: 43a3752348aaa3646852b7f2a4315009,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyGroup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43a3752348aaa3646852b7f2a4315009, type: 3}

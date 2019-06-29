@@ -7,6 +7,7 @@ public class EnemyHitpoint : MonoBehaviour
     public int hp = 1;
     public int DropRate = 30;
     public GameObject Item;
+    public int score;
     public ScoreUI scoreUI;
     public GameObject destroyEffect;
 
@@ -29,7 +30,7 @@ public class EnemyHitpoint : MonoBehaviour
             Instantiate(destroyEffect, transform.position, transform.rotation);
             Destroy(gameObject);
 
-            scoreUI.SetScore(10);
+            scoreUI.SetScore(score);
         }
     }
 
