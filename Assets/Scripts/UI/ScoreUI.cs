@@ -9,6 +9,7 @@ public class ScoreUI : MonoBehaviour {
 
     void Start() {
         scoreText = GetComponent<Text>();
+        scorePoint = 0;
     }
 
     void Update() {
