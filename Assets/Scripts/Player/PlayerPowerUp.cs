@@ -23,7 +23,6 @@ public class PlayerPowerUp : MonoBehaviour {
         tripleShot = GetComponent<TripleShot>();
         playerMove = GetComponent<PlayerMove>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = effect;
         conditionArray = new bool[maxPoint + 1];
         Initialize();
     }
@@ -49,6 +48,7 @@ public class PlayerPowerUp : MonoBehaviour {
             default: Debug.LogError("PowerUpError"); break;
         }
 
+        audioSource.clip = effect;
         audioSource.Play();
         powerUpPoint = 0;
     }

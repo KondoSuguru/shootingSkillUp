@@ -160,6 +160,7 @@ MonoBehaviour:
     type: 3}
   tripleRazer: {fileID: 4137233583379694619, guid: f6b1907a0026b2f418563a3517658f96,
     type: 3}
+  effect: {fileID: 8300000, guid: 1db6e90aebd22a248a10dcc8a10852d8, type: 3}
 --- !u!114 &1024357492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +258,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.58
       inSlope: 0
       outSlope: 0
       tangentMode: 0

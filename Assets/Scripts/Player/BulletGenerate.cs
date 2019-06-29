@@ -8,6 +8,7 @@ public class BulletGenerate : MonoBehaviour {
     public GameObject razer;
     public GameObject tripleBullet;
     public GameObject tripleRazer;
+    public AudioClip effect;
     float time = 0f;
     float shotTime = 0.5f;
     const float defaultShotTime = 0.5f;
@@ -15,11 +16,13 @@ public class BulletGenerate : MonoBehaviour {
     FloatingBullet floatingBullet;
     TripleShot tripleShot;
     Razer razerScript;
+    AudioSource audioSource;
 
     private void Start() {
         floatingBullet = GetComponent<FloatingBullet>();
         tripleShot = GetComponent<TripleShot>();
         razerScript = razer.GetComponent<Razer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -36,6 +39,9 @@ public class BulletGenerate : MonoBehaviour {
             } else {
                 GenerateBullet(bullet, bullet);
             }
+
+            audioSource.clip = effect;
+            audioSource.Play();
         }
     }
 

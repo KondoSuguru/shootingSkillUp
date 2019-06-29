@@ -7,13 +7,12 @@ using UnityEngine.UI;
 public class TopScoreUI : MonoBehaviour {
     public ScoreUI scoreUI;
     Text topScoreText;
-    const string path = "@../../Assets/Prefabs/UI/TopScore.txt";
+    const string path = "Assets/Prefabs/UI/TopScore.txt";
     static int topScore;
 
     ~TopScoreUI() {
         if (scoreUI.GetScore() > topScore) {
             File.WriteAllText(path, scoreUI.GetScore().ToString());
-            Debug.Log("デストラクタ");
         }
     }
 
