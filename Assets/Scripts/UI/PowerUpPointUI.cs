@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PowerUpPoint : MonoBehaviour {
+public class PowerUpPointUI : MonoBehaviour {
     public PlayerPowerUp playerPowerUp;
     Text pointCount;
 

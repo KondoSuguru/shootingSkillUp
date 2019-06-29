@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FloatingBullet : MonoBehaviour {
     public GameObject floatingBullet;
-    public PlayerMove playerMove;
+    PlayerMove playerMove;
     GameObject[] floatingBullets;
     Vector3[] updatePos;
     const float positionX = 2f;
@@ -14,6 +14,7 @@ public class FloatingBullet : MonoBehaviour {
     static int currentCount = 0;
 
     private void Start() {
+        playerMove = GetComponent<PlayerMove>();
         floatingBullets = new GameObject[maxCount];
         updatePos = new Vector3[maxCount];
     }
@@ -40,7 +41,7 @@ public class FloatingBullet : MonoBehaviour {
             return;
         }
 
-        for (int i = 0; i < currentCount; i++) {
+        for (int i = 0; i < currentCount; i++) { //振動防止
             if (Vector3.Distance(updatePos[i], floatingBullets[i].transform.position) < 0.1f) {
                 continue;
             }
@@ -75,7 +76,6 @@ public class FloatingBullet : MonoBehaviour {
         return currentCount == maxCount ? true : false;
     }
     public void InitOption() {
-
         currentCount = 0;
     }
 }

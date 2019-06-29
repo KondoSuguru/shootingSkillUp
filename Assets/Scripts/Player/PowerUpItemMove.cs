@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpItemMove : MonoBehaviour
-{
+public class PowerUpItemMove : MonoBehaviour {
     public float speed = 0.1f;
     public AudioClip effect;
     AudioSource audioSource;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = effect;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
         Vector3 pos = transform.position;
         pos += new Vector3(0, 0, -speed);
@@ -27,16 +23,14 @@ public class PowerUpItemMove : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "Player") {
+            audioSource.clip = effect;
             audioSource.Play();
             Destroy(gameObject);
         }
 
-        if(other.tag == "DeleteArea")
-        {
+        if (other.tag == "DeleteArea") {
             Destroy(gameObject);
         }
     }

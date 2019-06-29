@@ -5,30 +5,28 @@ using UnityEngine;
 
 public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
-    public TripleShot tripleShot;
     public AudioClip effect;
+    public Razer razer;
     int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
     BulletGenerate bulletGenerate;
     FloatingBullet floatingBullet;
+    TripleShot tripleShot;
     PlayerMove playerMove;
-    Razer razer;
     AudioSource audioSource;
 
     private void Start() {
         bulletGenerate = GetComponent<BulletGenerate>();
         floatingBullet = GetComponent<FloatingBullet>();
+        tripleShot = GetComponent<TripleShot>();
         playerMove = GetComponent<PlayerMove>();
-        razer = GetComponent<Razer>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = effect;
         conditionArray = new bool[maxPoint + 1];
         Initialize();
     }
     private void Update() {
-        ConditionArrayUpdate();
         PowerUp();
     }
 
@@ -50,6 +48,7 @@ public class PlayerPowerUp : MonoBehaviour {
             default: Debug.LogError("PowerUpError"); break;
         }
 
+        audioSource.clip = effect;
         audioSource.Play();
         powerUpPoint = 0;
     }

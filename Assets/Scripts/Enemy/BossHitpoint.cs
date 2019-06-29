@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossHitpoint : MonoBehaviour
 {
     public int hp = 100;
+    public ScoreUI scoreUI;
 
     private GameObject manager;
     private GamePlayScene playScene;
@@ -21,6 +22,7 @@ public class BossHitpoint : MonoBehaviour
     {
         if(hp <= 0 || Input.GetKeyDown(KeyCode.Alpha1))
         {
+            scoreUI.SetScore(200);
             //クリアシーンへ遷移
             playScene.Clear();
         }

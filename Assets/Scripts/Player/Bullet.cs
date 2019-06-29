@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour {
 
     private void Update() {
         //TrackingShot();
-        transform.position += new Vector3(0, 0, speed);
+        transform.position += transform.TransformDirection(Vector3.forward) * speed;
     }
 
     private void OnTriggerEnter(Collider other) {
