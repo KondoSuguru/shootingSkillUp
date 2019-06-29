@@ -11,6 +11,8 @@ public class PlayerHitpoint : MonoBehaviour
     private GameObject manager;
     private GamePlayScene playScene;
 
+    public GameObject damageEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class PlayerHitpoint : MonoBehaviour
         {
             if (isInvincible)
                 return;
+            Instantiate(damageEffect, transform.position, transform.rotation);
             hp -= 1;
             isInvincible = true;
         }
