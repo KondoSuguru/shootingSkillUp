@@ -41,7 +41,7 @@ public class PlayerPowerUp : MonoBehaviour {
 
         switch (powerUpPoint) {
             case 1: playerMove.SetSpeed(2f); break;
-            case 2: bulletGenerate.SetShotTime(0.02f); break;
+            case 2: bulletGenerate.SetShotTime(0.08f); break;
             case 3: tripleShot.SetTriple(true); break;
             case 4: razer.SetRazer(true); break;
             case 5: floatingBullet.GenerateOption(); break;

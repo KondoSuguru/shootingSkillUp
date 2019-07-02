@@ -68,15 +68,15 @@ public class BulletGenerate : MonoBehaviour {
 
     public void SetShotTime(float set) {
         shotTime -= set;
-        if (shotTime < 0.25f) {
-            shotTime = 0.25f;
+        if (shotTime < 0.2f) {
+            shotTime = 0.2f;
         }
     }
     public float GetShotTime() {
         return shotTime;
     }
     public bool IsMaxShotTime() {
-        return shotTime <= 0.25f ? true : false;
+        return shotTime <= 0.2f ? true : false;
     }
     public void InitShotTime() {
         shotTime = defaultShotTime;

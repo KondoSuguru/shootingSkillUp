@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
-{
+public class PlayerMove : MonoBehaviour {
     public float speed = 10.0f; //移動速度
     public float forceMultiplier = 50.0f; //移動速度の入力に対する追従度（大きいほどきびきび動く）
     float defaultSpeed = 10f;
@@ -12,19 +11,22 @@ public class PlayerMove : MonoBehaviour
     //float x = 3;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         Vector3 moveVector = Vector3.zero;
         moveVector.x = Input.GetAxis("Horizontal") * speed;
         moveVector.z = Input.GetAxis("Vertical") * speed;
         //moveVector.Normalize();
         rb.AddForce(forceMultiplier * (moveVector - rb.velocity));
+
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, -14.45f, 14.45f),
+            transform.position.y,
+            Mathf.Clamp(transform.position.z, 3.24f, 35f));
 
         //二次関数
         //x -= 0.05f;
