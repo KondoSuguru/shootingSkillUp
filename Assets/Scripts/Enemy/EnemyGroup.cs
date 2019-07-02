@@ -16,7 +16,11 @@ public class EnemyGroup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.childCount == 1)
+        if(transform.childCount == 2)
+        {
+            lastEnemyPos = transform.GetChild(0).position;
+        }
+        else if (transform.childCount == 1)
         {
             lastEnemyPos = transform.GetChild(0).position;
         }
