@@ -68,9 +68,9 @@ public class BulletGenerate : MonoBehaviour {
 
     //弾の生成
     void GenerateBullet(GameObject playerBullet, GameObject optionBullet) {
-        Instantiate(playerBullet, transform.position, transform.rotation);
+        Instantiate(playerBullet, transform.position, playerBullet.transform.rotation);
         for (int i = 0; i < floatingBullet.GetCount(); i++) {
-            Instantiate(optionBullet, floatingBullet.GetOptions()[i].transform.position, floatingBullet.GetOptions()[i].transform.rotation);
+            Instantiate(optionBullet, floatingBullet.GetOptions()[i].transform.position, optionBullet.transform.rotation);
         }
     }
 

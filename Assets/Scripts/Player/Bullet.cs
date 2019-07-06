@@ -11,12 +11,11 @@ public class Bullet : MonoBehaviour {
     GameObject nearEnemy;
 
     private void Start() {
-        //ToEnemyRotate();
     }
 
     private void Update() {
-        //TrackingShot();
-        transform.position += transform.TransformDirection(Vector3.forward) * speed;
+        transform.Translate(transform.TransformDirection(-Vector3.forward * speed));
+        //transform.position += transform.TransformDirection(Vector3.forward) * speed;
     }
 
     private void OnTriggerEnter(Collider other) {
