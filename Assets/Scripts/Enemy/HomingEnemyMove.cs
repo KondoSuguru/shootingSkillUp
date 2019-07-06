@@ -9,11 +9,14 @@ public class HomingEnemyMove : MonoBehaviour
     public float rotSpeed = 60.0f;//回転速度
     private bool isStart;//更新をするかどうか
 
+    public Material[] materials;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
         isStart = false;
+        GetComponent<Renderer>().material = materials[0];
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class HomingEnemyMove : MonoBehaviour
         if (other.tag == "EnemyStartLine")
         {
             isStart = true;
+            GetComponent<Renderer>().material = materials[1];
         }
     }
 

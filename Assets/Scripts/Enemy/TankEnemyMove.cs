@@ -6,10 +6,12 @@ public class TankEnemyMove : MonoBehaviour
 {
     public float speed = 0.1f;
 
+    public Material[] materials;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Renderer>().material = materials[0];
     }
 
     // Update is called once per frame
@@ -18,5 +20,10 @@ public class TankEnemyMove : MonoBehaviour
         Vector3 pos = transform.position;
         pos += new Vector3(0, 0, -speed);
         transform.position = pos;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GetComponent<Renderer>().material = materials[1];
     }
 }

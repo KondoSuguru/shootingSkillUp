@@ -128,6 +128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   rotSpeed: 60
+  materials:
+  - {fileID: 2100000, guid: 982038d0ee7e60c41a8639271d8ffff6, type: 2}
+  - {fileID: 2100000, guid: bb969d8df1394814f96db99a7e197fb3, type: 2}
 --- !u!54 &2875829496430397976
 Rigidbody:
   m_ObjectHideFlags: 0

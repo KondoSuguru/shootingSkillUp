@@ -109,6 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   backTime: 2
+  materials:
+  - {fileID: 2100000, guid: 982038d0ee7e60c41a8639271d8ffff6, type: 2}
+  - {fileID: 2100000, guid: a56b5abe1e7f8704cb03870836586ec0, type: 2}
 --- !u!54 &2059524696617761361
 Rigidbody:
   m_ObjectHideFlags: 0

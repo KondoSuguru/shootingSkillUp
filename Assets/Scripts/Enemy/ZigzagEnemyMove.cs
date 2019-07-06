@@ -11,11 +11,14 @@ public class ZigzagEnemyMove : MonoBehaviour
     private int count;
     private bool isStart;//更新をするかどうか
 
+    public Material[] materials;
+
     // Start is called before the first frame update
     void Start()
     {
         count = 30;
         isStart = false;
+        GetComponent<Renderer>().material = materials[0];
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class ZigzagEnemyMove : MonoBehaviour
         if (other.tag == "EnemyStartLine")
         {
             isStart = true;
+            GetComponent<Renderer>().material = materials[1];
         }
     }
 }
