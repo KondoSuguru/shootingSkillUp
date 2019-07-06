@@ -40,8 +40,7 @@ public class BulletGenerate : MonoBehaviour {
                 GenerateBullet(bullet, bullet);
             }
 
-            audioSource.clip = effect;
-            audioSource.Play();
+            audioSource.PlayOneShot(effect);
         }
     }
 

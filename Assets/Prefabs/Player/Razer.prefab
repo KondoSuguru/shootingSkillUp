@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4235161652891093052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 8.200002}
+  m_LocalScale: {x: 0.5, y: 0.1, z: 8.200002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009a047b2fe2edd4cbcc82561f4f8297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  se: {fileID: 8300000, guid: c40a226d8d411f24dafe5745ee2a5076, type: 3}
+  sound: {fileID: 6497352289533160984, guid: 455fc8b3fd8ca624f98ed15cb8e3d38b, type: 3}
 --- !u!114 &-5832785823743134394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,12 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d535523b7e533b438febe194776e0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  razer: {fileID: 4235161652891093052}
-  tripleRazer: {fileID: 4137233583379694619, guid: f6b1907a0026b2f418563a3517658f96,
-    type: 3}
-  tripleShot: {fileID: 5697434329468357106, guid: 33c5611e7533f91489ba8ae61c21a0a8,
-    type: 3}
-  floatingBullet: {fileID: 1024357492, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
 --- !u!82 &-370490260843496963
 AudioSource:
   m_ObjectHideFlags: 0

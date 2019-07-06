@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Razer : MonoBehaviour {
     static bool enabledRazer = false;
+    CapsuleCollider collider;
 
     private void Start() {
+        collider = GetComponent<CapsuleCollider>();
         transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 
@@ -18,5 +20,12 @@ public class Razer : MonoBehaviour {
     }
     public bool GetRazer() {
         return enabledRazer;
+    }
+
+    public void OnTriggerEnter(Collider other) {
+        if (other.tag == "BulletDeleteArea") {
+            collider.enabled = false;
+
+        }
     }
 }

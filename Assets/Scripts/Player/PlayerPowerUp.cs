@@ -48,8 +48,7 @@ public class PlayerPowerUp : MonoBehaviour {
             default: Debug.LogError("PowerUpError"); break;
         }
 
-        audioSource.clip = effect;
-        audioSource.Play();
+        audioSource.PlayOneShot(effect);
         powerUpPoint = 0;
     }
 

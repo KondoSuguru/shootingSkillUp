@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PowerUpItemMove : MonoBehaviour {
     public float speed = 0.1f;
-    public AudioClip effect;
+    public AudioClip se;
+    public GameObject sound;
     AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -25,8 +26,9 @@ public class PowerUpItemMove : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            audioSource.clip = effect;
-            audioSource.Play();
+            //audioSource.PlayOneShot(se);
+            //sound.GetComponent<Sound>().SoundPlay(se);
+            AudioSource.PlayClipAtPoint(se, gameObject.transform.position);
             Destroy(gameObject);
         }
 
