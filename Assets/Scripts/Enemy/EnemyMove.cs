@@ -12,6 +12,8 @@ public class EnemyMove : MonoBehaviour
     private bool isStart;
     private float count;
 
+    public Material[] materials;
+
     enum initPositionLR
     {
         Left,
@@ -35,6 +37,7 @@ public class EnemyMove : MonoBehaviour
         {
             initPosLR = initPositionLR.Left;
         }
+        GetComponent<Renderer>().material = materials[0];
     }
 
     // Update is called once per frame
@@ -63,6 +66,7 @@ public class EnemyMove : MonoBehaviour
         if (other.tag == "EnemyStartLine")
         {
             isStart = true;
+            GetComponent<Renderer>().material = materials[1];
         }
     }
 

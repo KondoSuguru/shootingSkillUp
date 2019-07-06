@@ -145,6 +145,9 @@ MonoBehaviour:
   speed: 0.05
   period: 3
   amplitude: 0.05
+  materials:
+  - {fileID: 2100000, guid: 982038d0ee7e60c41a8639271d8ffff6, type: 2}
+  - {fileID: 2100000, guid: a56b5abe1e7f8704cb03870836586ec0, type: 2}
 --- !u!114 &2528025570837721279
 MonoBehaviour:
   m_ObjectHideFlags: 0

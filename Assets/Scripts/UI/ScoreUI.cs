@@ -13,7 +13,7 @@ public class ScoreUI : MonoBehaviour {
     }
 
     void Update() {
-        scoreText.text = "Score : " + scorePoint;
+        scoreText.text = "得点 : " + scorePoint;
     }
 
     public void SetScore(int set) {

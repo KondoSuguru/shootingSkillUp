@@ -126,6 +126,7 @@ MonoBehaviour:
   hp: 5
   DropRate: 100
   Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
+  score: 0
   scoreUI: {fileID: 1371205638589373895, guid: 026a28a92bb22f744bee57716b837ca7, type: 3}
   destroyEffect: {fileID: 6259176189907395978, guid: f7de9a5ce74bd2b42889a52fd51f9d9c,
     type: 3}
@@ -142,3 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  materials:
+  - {fileID: 2100000, guid: 982038d0ee7e60c41a8639271d8ffff6, type: 2}
+  - {fileID: 2100000, guid: cb1728c61143d6f4ab297851a6e9a43b, type: 2}
