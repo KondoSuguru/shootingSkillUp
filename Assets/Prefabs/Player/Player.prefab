@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  se: {fileID: 8300000, guid: 3ee105d277d1bbe48bd5e1996503830a, type: 3}
   damageEffect: {fileID: 1618585023960562328, guid: 2f581f63d6f34c4459f6086fad8afecb,
     type: 3}
 --- !u!114 &1019736651
@@ -589,7 +590,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
