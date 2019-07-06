@@ -8,7 +8,8 @@ public class BulletGenerate : MonoBehaviour {
     public GameObject razer;
     public GameObject tripleBullet;
     public GameObject tripleRazer;
-    public AudioClip effect;
+    public AudioClip NormalSE;
+    public AudioClip RazerSE;
     float time = 0f;
     float shotTime = 0.5f;
     const float defaultShotTime = 0.5f;
@@ -40,8 +41,7 @@ public class BulletGenerate : MonoBehaviour {
                 GenerateBullet(bullet, bullet);
             }
 
-            audioSource.clip = effect;
-            audioSource.Play();
+            Sound();
         }
     }
 
@@ -55,6 +55,14 @@ public class BulletGenerate : MonoBehaviour {
         if (time >= shotTime) {
             canShot = true;
             time = 0;
+        }
+    }
+
+    void Sound() {
+        if (razerScript.GetRazer()) {
+            audioSource.PlayOneShot(RazerSE);
+        } else {
+            audioSource.PlayOneShot(NormalSE);
         }
     }
 

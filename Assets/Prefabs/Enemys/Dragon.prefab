@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6412790356932237189}
   m_Layer: 0
   m_Name: Dragon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +63,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (11)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -133,11 +138,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -163,6 +163,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -233,11 +238,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -263,6 +263,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -333,11 +338,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -363,6 +363,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -433,11 +438,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -463,6 +463,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -533,11 +538,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -563,6 +563,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,11 +638,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -663,6 +663,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -733,11 +738,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -763,6 +763,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 4331509799918873746, guid: ce2333f5a93b97f41989b715764dd10e,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonHead
+      objectReference: {fileID: 0}
     - target: {fileID: 5135258638877130859, guid: ce2333f5a93b97f41989b715764dd10e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -833,16 +838,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 2528025570837721279, guid: ce2333f5a93b97f41989b715764dd10e,
-        type: 3}
-      propertyPath: shotTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4331509799918873746, guid: ce2333f5a93b97f41989b715764dd10e,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonHead
-      objectReference: {fileID: 0}
     - target: {fileID: 6822148413504663850, guid: ce2333f5a93b97f41989b715764dd10e,
         type: 3}
       propertyPath: speed
@@ -857,6 +852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: hp
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528025570837721279, guid: ce2333f5a93b97f41989b715764dd10e,
+        type: 3}
+      propertyPath: shotTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce2333f5a93b97f41989b715764dd10e, type: 3}
@@ -873,6 +873,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -943,11 +948,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -973,6 +973,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1043,11 +1048,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -1073,6 +1073,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1143,11 +1148,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -1173,6 +1173,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1243,11 +1248,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: speed
@@ -1273,6 +1273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2358760502260959134}
     m_Modifications:
+    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
+        type: 3}
+      propertyPath: m_Name
+      value: DragonBody (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 1422297114779646857, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1342,11 +1347,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8168978977824011219, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
-        type: 3}
-      propertyPath: m_Name
-      value: DragonBody (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8776877655514205873, guid: 4386dd16b0c1fd0469f4b5e28c824fa2,
         type: 3}

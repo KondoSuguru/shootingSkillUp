@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
+    public AudioClip se;
     float speed = 1f;
     float trackingSpeed = 0.7f;
     static bool isTracking = false;
@@ -19,13 +20,9 @@ public class Bullet : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        //BulletDeleteAreaに触れたら消滅
-        //if (other.tag == "BulletDeleteArea") {
-        //    Destroy(gameObject);
-        //}
-
         //Enemyに触れたら消滅
         if (other.tag == "Enemy" && tag == "Bullet") {
+            AudioSource.PlayClipAtPoint(se, gameObject.transform.position);
             Destroy(gameObject);
         }
     }

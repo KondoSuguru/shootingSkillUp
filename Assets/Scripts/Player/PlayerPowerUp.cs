@@ -25,6 +25,8 @@ public class PlayerPowerUp : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         conditionArray = new bool[maxPoint + 1];
         Initialize();
+
+        razer.SetRazer(true);
     }
     private void Update() {
         PowerUp();
@@ -48,8 +50,7 @@ public class PlayerPowerUp : MonoBehaviour {
             default: Debug.LogError("PowerUpError"); break;
         }
 
-        audioSource.clip = effect;
-        audioSource.Play();
+        audioSource.PlayOneShot(effect);
         powerUpPoint = 0;
     }
 
