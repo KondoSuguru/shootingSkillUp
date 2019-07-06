@@ -348,7 +348,8 @@ MonoBehaviour:
     type: 3}
   tripleRazer: {fileID: 4137233583379694619, guid: f6b1907a0026b2f418563a3517658f96,
     type: 3}
-  effect: {fileID: 8300000, guid: 0068ccb876b7a4542bc8eb308c30f10a, type: 3}
+  NormalSE: {fileID: 8300000, guid: 0068ccb876b7a4542bc8eb308c30f10a, type: 3}
+  RazerSE: {fileID: 8300000, guid: c8157043765728e48bfa6cd228f820c2, type: 3}
 --- !u!114 &1024357492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4513311559441151610, guid: 22dbad092a6e5ec43a23bbf816929bdd, type: 3}
-  effect: {fileID: 8300000, guid: b9ad1cae8b26a69478dccc81d2fd8073, type: 3}
+  effect: {fileID: 8300000, guid: cdf3eb8f29c1ed14bb2ec3f7eeecbf8c, type: 3}
   razer: {fileID: -5832785823743134394, guid: baa341f67b51f8c4b8b0a0799b544af7, type: 3}
 --- !u!114 &-5828696837723764691
 MonoBehaviour:
@@ -402,7 +403,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

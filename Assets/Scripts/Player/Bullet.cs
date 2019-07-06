@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public AudioClip se;
-    public Sound sound;
     float speed = 1f;
     float trackingSpeed = 0.7f;
     static bool isTracking = false;
     GameObject nearEnemy;
-    //AudioSource audio;
 
     private void Start() {
-        //audio = GetComponent<AudioSource>();
         //ToEnemyRotate();
     }
 
@@ -25,8 +22,6 @@ public class Bullet : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         //Enemyに触れたら消滅
         if (other.tag == "Enemy" && tag == "Bullet") {
-            //audio.PlayOneShot(se);
-            //sound.SoundPlay(se);
             AudioSource.PlayClipAtPoint(se, gameObject.transform.position);
             Destroy(gameObject);
         }
