@@ -13,6 +13,10 @@ public class Razer : MonoBehaviour {
 
     private void Update() {
         transform.localScale += new Vector3(0, 0, 0.3f);
+
+        if (transform.localScale.z > 15f) {
+            Destroy(gameObject);
+        }
     }
 
     public void SetRazer(bool set) {
@@ -25,7 +29,6 @@ public class Razer : MonoBehaviour {
     public void OnTriggerEnter(Collider other) {
         if (other.tag == "BulletDeleteArea") {
             collider.enabled = false;
-
         }
     }
 }

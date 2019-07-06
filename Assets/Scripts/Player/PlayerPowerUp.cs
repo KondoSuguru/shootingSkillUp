@@ -25,6 +25,8 @@ public class PlayerPowerUp : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         conditionArray = new bool[maxPoint + 1];
         Initialize();
+
+        razer.SetRazer(true);
     }
     private void Update() {
         PowerUp();
