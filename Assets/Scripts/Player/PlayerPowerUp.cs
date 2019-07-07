@@ -26,7 +26,7 @@ public class PlayerPowerUp : MonoBehaviour {
         conditionArray = new bool[maxPoint + 1];
         Initialize();
 
-        razer.SetRazer(true);
+
     }
     private void Update() {
         PowerUp();
