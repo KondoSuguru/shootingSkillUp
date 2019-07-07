@@ -4950,6 +4950,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8884786911128454086, guid: 334c76068d7062b419bc5c1512e169ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7587585811705315787, guid: 334c76068d7062b419bc5c1512e169ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5054,6 +5059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7587585811705315787, guid: 334c76068d7062b419bc5c1512e169ad,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 334c76068d7062b419bc5c1512e169ad, type: 3}
