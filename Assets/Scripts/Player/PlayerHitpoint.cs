@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerHitpoint : MonoBehaviour
 {
     public int hp = 5;
+    public AudioClip se;
+    public GameObject damageEffect;
+
     private bool isInvincible; //無敵状態の判定
     private int invincibleTimer;
 
     private GameObject manager;
     private GamePlayScene playScene;
+    private AudioSource audioSource;
 
-    public GameObject damageEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class PlayerHitpoint : MonoBehaviour
         invincibleTimer = 0;
         manager = GameObject.FindGameObjectWithTag("PlaySceneManager");
         playScene = manager.GetComponent<GamePlayScene>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,8 @@ public class PlayerHitpoint : MonoBehaviour
         {
             if (isInvincible)
                 return;
+
+            audioSource.PlayOneShot(se);
             Instantiate(damageEffect, transform.position, transform.rotation);
             hp -= 1;
             isInvincible = true;
