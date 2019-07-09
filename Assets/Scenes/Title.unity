@@ -521,6 +521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 0.01
+  audioSource: {fileID: 1121349512}
 --- !u!114 &743892064
 MonoBehaviour:
   m_ObjectHideFlags: 0

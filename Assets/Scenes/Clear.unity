@@ -242,6 +242,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7058281078671469165, guid: 334c76068d7062b419bc5c1512e169ad,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 724808650}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 334c76068d7062b419bc5c1512e169ad, type: 3}
 --- !u!224 &59779573 stripped
