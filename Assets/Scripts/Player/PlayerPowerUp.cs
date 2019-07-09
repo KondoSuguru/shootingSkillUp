@@ -7,7 +7,7 @@ public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
     public AudioClip effect;
     public Razer razer;
-    int powerUpPoint = 5;
+    int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
