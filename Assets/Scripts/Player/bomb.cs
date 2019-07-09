@@ -5,8 +5,9 @@ using UnityEngine;
 public class bomb : MonoBehaviour
 {
     public float time;
+    public float time2;
     public float timeout;
-    public float destime;
+    public float destime;//弾消去までの時間
     public float speed;
     public Vector3 dir;
     Rigidbody rb;
@@ -14,11 +15,13 @@ public class bomb : MonoBehaviour
     
     public Transform enemy;
 
-    public float a = 10;
+    public float a = 10; //加速度
+    float x;//bullet2のどっちのBombかによって変える
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        x = 3;
     }
 
     private void Update()
@@ -30,7 +33,12 @@ public class bomb : MonoBehaviour
         if (time >= timeout)
         {
             speed = 0;
-            rb.AddForce(Shot() * (a * time));
+            
+            if (time>=timeout+x)
+            {
+                time2 += Time.deltaTime;
+                rb.AddForce(Shot() * (a * time2));
+            }
         }
 
         if (time >= destime)
@@ -46,7 +54,7 @@ public class bomb : MonoBehaviour
         y = transform.position.z;
         x1 = enemy.transform.position.x;
         y1 = enemy.transform.position.z;
-
+        
         Vector3 force = new Vector3(x1 - x, 0, y1 - y);
         return force;
     }
