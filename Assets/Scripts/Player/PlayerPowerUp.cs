@@ -11,8 +11,7 @@ public class PlayerPowerUp : MonoBehaviour {
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
-    [SerializeField]
-    bool isAllUp = true;
+    [SerializeField] bool isAllUp;
     BulletGenerate bulletGenerate;
     FloatingBullet floatingBullet;
     TripleShot tripleShot;

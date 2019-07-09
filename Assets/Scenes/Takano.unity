@@ -731,8 +731,7 @@ PrefabInstance:
       propertyPath: isAllUp
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3740201305335106587, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
 --- !u!114 &288402104 stripped
 MonoBehaviour:
@@ -773,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 8884786911128454086, guid: 334c76068d7062b419bc5c1512e169ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7587585811705315787, guid: 334c76068d7062b419bc5c1512e169ad,
         type: 3}

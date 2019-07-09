@@ -12,7 +12,7 @@ public class BulletGenerate : MonoBehaviour {
     public AudioClip RazerSE;
     float time = 0f;
     float shotTime = 0.5f;
-    const float defaultShotTime = 0.5f;
+    static readonly float defaultShotTime = 0.5f;
     bool canShot = false;
     FloatingBullet floatingBullet;
     TripleShot tripleShot;
