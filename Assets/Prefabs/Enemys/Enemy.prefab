@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   DropRate: 0
-  Item: {fileID: 203323663990979274, guid: 7f6182e94b2c3f24eabd351268087672, type: 3}
+  Item: {fileID: 9146946742152905815, guid: 04625e3c367908547a7797e596ab40ea, type: 3}
   score: 10
   scoreUI: {fileID: 1371205638589373895, guid: 026a28a92bb22f744bee57716b837ca7, type: 3}
   destroyEffect: {fileID: 6259176189907395978, guid: f7de9a5ce74bd2b42889a52fd51f9d9c,
