@@ -46,17 +46,29 @@ public class PlayerPowerUp : MonoBehaviour {
         }
 
         switch (powerUpPoint) {
-            case 1: playerMove.SetSpeed(2f); break;
-            case 2: bulletGenerate.SetShotTime(0.07f); break;
-            case 3: floatingBullet.GenerateOption(); break;
-            case 4: razer.SetRazer(true); /*tripleShot.SetTriple(false);*/ break;
-            case 5: tripleShot.SetTriple(true); /*razer.SetRazer(false);*/ break;
-            default: Debug.LogError("PowerUpError"); break;
+            case 1:
+                playerMove.SetSpeed(2f);
+                break;
+            case 2:
+                bulletGenerate.SetShotTime(0.07f);
+                break;
+            case 3:
+                tripleShot.SetTriple(true);
+                break;
+            case 4:
+                razer.SetRazer(true);
+                break;
+            case 5:
+                floatingBullet.GenerateOption();
+                break;
+            default:
+                Debug.LogError("PowerUpError");
+                break;
         }
         if (!isAllUp) {
             if (powerUpPoint == 4) {
                 tripleShot.SetTriple(false);
-            } else if (powerUpPoint == 5) {
+            } else if (powerUpPoint == 3) {
                 razer.SetRazer(false);
             }
         }
@@ -83,7 +95,12 @@ public class PlayerPowerUp : MonoBehaviour {
     //条件配列の更新
     void ConditionArrayUpdate() {
         conditionArray = new bool[maxPoint + 1] { //最初のtrueはダミー
-            true, playerMove.IsMaxSpeed(), bulletGenerate.IsMaxShotTime(), /*bullet.GetTracking()*/ floatingBullet.IsMaxCount(), razer.GetRazer(), tripleShot.GetTriple()
+            true,
+            playerMove.IsMaxSpeed(),
+            bulletGenerate.IsMaxShotTime(),
+            tripleShot.GetTriple(),
+            razer.GetRazer(),
+            floatingBullet.IsMaxCount()
         };
     }
 

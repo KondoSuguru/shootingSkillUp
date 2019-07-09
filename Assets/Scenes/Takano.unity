@@ -731,7 +731,8 @@ PrefabInstance:
       propertyPath: isAllUp
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3740201305335106587, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1646e9c0aa9ea074c96a87cff808d658, type: 3}
 --- !u!114 &288402104 stripped
 MonoBehaviour:
@@ -768,6 +769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FadePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8884786911128454086, guid: 334c76068d7062b419bc5c1512e169ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7587585811705315787, guid: 334c76068d7062b419bc5c1512e169ad,
         type: 3}
@@ -1147,7 +1153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E09\n\u65B9\n\u5411"
+  m_Text: "\u5F71\n\u5206\n\u8EAB"
 --- !u!222 &535017723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2984,7 +2990,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F71\n\u5206\n\u8EAB"
+  m_Text: "\u4E09\n\u65B9\n\u5411"
 --- !u!222 &1249892610
 CanvasRenderer:
   m_ObjectHideFlags: 0

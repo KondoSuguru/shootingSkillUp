@@ -21,9 +21,11 @@ public class Bullet : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         //Enemyに触れたら消滅
-        if (other.tag == "Enemy" && tag == "Bullet") {
-            AudioSource.PlayClipAtPoint(se, gameObject.transform.position);
+        if (tag == "Bullet" && other.tag == "Enemy") {
+            AudioSource.PlayClipAtPoint(se, Vector3.zero);
             Destroy(gameObject);
+        } else if (other.tag == "Enemy" && tag == "Razer") {
+            AudioSource.PlayClipAtPoint(se, Vector3.zero);
         }
     }
     private void OnTriggerExit(Collider other) {
