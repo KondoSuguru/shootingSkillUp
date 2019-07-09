@@ -14,7 +14,7 @@ public class bullet : MonoBehaviour
     public float destime = 10;
 
     float g;
-    float angle = 45;
+    float angle = 30;
 
     // Update is called once per frame
     void Start()
@@ -23,7 +23,7 @@ public class bullet : MonoBehaviour
         //GetComponent<Rigidbody>().velocity = forward * speed;
 
         g = 9.8f;
-       angle = Random.Range(0, 90);
+        angle = Random.Range(30, 90);
 
         Debug.Log(angle);
     }
@@ -58,10 +58,10 @@ public class bullet : MonoBehaviour
     //プレイヤーと敵の距離を求める
     float Long()
     {
-        float x = player.transform.position.z;//プレイヤーのx座標
-        float y = player.transform.position.x;//プレイヤーのz座標
-        float x1 = enemy.transform.position.z;//敵のx座標
-        float y1 = enemy.transform.position.x;//敵のz座標
+        float x = player.transform.position.x;//プレイヤーのx座標
+        float y = player.transform.position.z;//プレイヤーのz座標
+        float x1 = enemy.transform.position.x;//敵のx座標
+        float y1 = enemy.transform.position.z;//敵のz座標
         //Debug.Log(x);
         //Debug.Log(y);
         //Debug.Log(x1);
@@ -69,7 +69,7 @@ public class bullet : MonoBehaviour
 
         Vector3 L = new Vector3(x1 - x, 0, y1 - y);
         float l = Triangle(L.x, L.z);
-        Debug.Log(l);
+        //Debug.Log(l);
         return l;
     }
 
@@ -77,18 +77,18 @@ public class bullet : MonoBehaviour
     float V0()
     {
         float cos = Mathf.Cos(Rad());
-        float sin = Mathf.Sign(Rad());
+        float sin = Mathf.Sin(Rad());
         //Debug.Log(Rad());
-        float v0 = Mathf.Sqrt(Long() * g / 2 * sin * 2 * cos);
-        //Debug.Log(v0);
+        float v0 = Mathf.Sqrt(Long() * g / (2 * sin * cos));
+        Debug.Log(v0);
         return v0;
     }
 
     Vector3 Power()
     {
         float v0 = V0(); //初速
-        float x0 = -v0 * Mathf.Cos(Rad());
-        float y0 = v0 * Mathf.Sin(Rad());
+        float x0 = v0 * Mathf.Sin(Rad());
+        float y0 = v0 * Mathf.Cos(Rad());
         Vector3 pow = new Vector3(x0, 0, y0);
         return pow;
     }
@@ -97,7 +97,7 @@ public class bullet : MonoBehaviour
     {
         Vector3 pow = Power();
 
-        Vector3 force = new Vector3(pow.x, 0, pow.z - time * g);
+        Vector3 force = new Vector3(pow.x - time * g , 0, pow.z );
 
         rb.AddForce(force);
     }

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class Fade : MonoBehaviour
 {
     public float fadeSpeed;
+    public AudioSource audioSource;
     float r, g, b, a;
+    float fadeAudio;
     Image fadePanel;
     bool isFadeIn;
     bool isFadeOut;
@@ -19,6 +21,10 @@ public class Fade : MonoBehaviour
         g = fadePanel.color.g;
         b = fadePanel.color.b;
         a = fadePanel.color.a;
+
+        fadeAudio = audioSource.volume;
+        fadeAudio *= fadeSpeed;
+        audioSource.volume = 0f;
     }
 
     // Update is called once per frame
@@ -37,6 +43,7 @@ public class Fade : MonoBehaviour
     void FadeInUpdate()
     {
         a -= fadeSpeed;
+        audioSource.volume += fadeAudio;
         fadePanel.color = new Color(r, g, b, a);
         if (a <= 0)
             isFadeIn = false;
@@ -45,6 +52,7 @@ public class Fade : MonoBehaviour
     void FadeOutUpdate()
     {
         a += fadeSpeed;
+        audioSource.volume -= fadeAudio;
         fadePanel.color = new Color(r, g, b, a);
         if (a >= 1)
             isFadeOut = false;

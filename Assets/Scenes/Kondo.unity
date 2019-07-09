@@ -5065,6 +5065,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7058281078671469165, guid: 334c76068d7062b419bc5c1512e169ad,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 124647691}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 334c76068d7062b419bc5c1512e169ad, type: 3}
 --- !u!1001 &7341841397887161952

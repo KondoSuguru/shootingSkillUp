@@ -7,6 +7,7 @@ public class PlayerHitpoint : MonoBehaviour
     public int hp = 5;
     public AudioClip se;
     public GameObject damageEffect;
+    public Material material;
 
     private bool isInvincible; //無敵状態の判定
     private int invincibleTimer;
@@ -62,7 +63,7 @@ public class PlayerHitpoint : MonoBehaviour
         if(invincibleTimer >= 120)
         {
             invincibleTimer = 0;
-            GetComponent<Renderer>().material.color = Color.white;
+            GetComponent<Renderer>().material = material;
             isInvincible = false;
         }
     }
