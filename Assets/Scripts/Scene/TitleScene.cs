@@ -23,7 +23,7 @@ public class TitleScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!fade.IsFadeIn() && Input.GetKeyUp(KeyCode.Space))
+        if (!fade.IsFadeIn() && Input.GetKeyUp(KeyCode.Space) && !isFadeStay)
         {
             AudioSource.PlayClipAtPoint(se, Vector3.zero);
             fade.FadeOutStart();

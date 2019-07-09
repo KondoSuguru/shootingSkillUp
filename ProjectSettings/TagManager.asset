@@ -15,6 +15,7 @@ TagManager:
   - PlaySceneManager
   - FadePanel
   - TripleSide
+  - Shield
   layers:
   - Default
   - TransparentFX

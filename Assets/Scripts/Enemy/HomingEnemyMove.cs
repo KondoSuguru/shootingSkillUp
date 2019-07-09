@@ -26,7 +26,8 @@ public class HomingEnemyMove : MonoBehaviour
 
         if (!isStart)
         {
-            pos += new Vector3(0, 0, -speed);
+            //pos += new Vector3(0, 0, -speed);
+            pos += transform.TransformDirection(Vector3.forward) * speed;
         }
         else
         {

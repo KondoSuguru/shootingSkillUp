@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 909136758007807959}
   m_Layer: 0
   m_Name: shield
-  m_TagString: Enemy
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,8 +396,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7305954707305142979}
   m_LocalRotation: {x: -0, y: 0.001734786, z: -0, w: 0.99999857}
-  m_LocalPosition: {x: -0.261, y: 0, z: -0.084}
-  m_LocalScale: {x: 1.9873337, y: 1.1174003, z: 0.16366667}
+  m_LocalPosition: {x: -0.262, y: 0, z: -0.268}
+  m_LocalScale: {x: 1.9873337, y: 1.1174003, z: 0.27674395}
   m_Children: []
   m_Father: {fileID: 4501478418091465423}
   m_RootOrder: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  DropRate: 0
+  DropRate: 100
   Item: {fileID: 9146946742152905815, guid: 04625e3c367908547a7797e596ab40ea, type: 3}
   score: 30
   scoreUI: {fileID: 1371205638589373895, guid: 026a28a92bb22f744bee57716b837ca7, type: 3}

@@ -27,5 +27,10 @@ public class Razer : MonoBehaviour {
         if (other.tag == "BulletDeleteArea") {
             boxCollider.enabled = false;
         }
+
+        if(other.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -36,6 +36,11 @@ public class Bullet : MonoBehaviour {
         } else if (other.tag == "Enemy" && tag == "Razer") {
             AudioSource.PlayClipAtPoint(se, Vector3.zero);
         }
+
+        if(other.tag == "Shield")
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerExit(Collider other) {
         //BulletDeleteAreaを超えたら消滅
