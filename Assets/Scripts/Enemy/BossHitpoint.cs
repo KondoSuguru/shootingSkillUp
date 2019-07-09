@@ -25,6 +25,7 @@ public class BossHitpoint : MonoBehaviour
             scoreUI.SetScore(200);
             //クリアシーンへ遷移
             playScene.Clear();
+            Destroy(gameObject);
         }
     }
 
