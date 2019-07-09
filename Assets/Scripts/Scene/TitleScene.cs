@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleScene : MonoBehaviour
 {
+    public AudioClip se;
     private GameObject fadePanel;
     private Fade fade;
     private bool isFadeStay;
@@ -24,6 +25,7 @@ public class TitleScene : MonoBehaviour
     {
         if (!fade.IsFadeIn() && Input.GetKeyUp(KeyCode.Space))
         {
+            AudioSource.PlayClipAtPoint(se, Vector3.zero);
             fade.FadeOutStart();
             isFadeStay = true;
         }
