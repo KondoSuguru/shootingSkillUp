@@ -8,8 +8,8 @@ public class FloatingBullet : MonoBehaviour {
     PlayerMove playerMove;
     GameObject[] floatingBullets;
     Vector3[] updatePos;
-    const float positionX = 2f;
-    const float trackingSpeed = 0.015f;
+    static readonly float positionX = 2f;
+    static readonly float trackingSpeed = 0.015f;
     const int maxCount = 2;
     static int currentCount = 0;
 

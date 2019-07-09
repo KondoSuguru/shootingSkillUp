@@ -5,18 +5,27 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public AudioClip se;
-    float speed = 1f;
+    float bulletVelocity = 1f;
     float trackingSpeed = 0.7f;
+    float z;
+    float x;
     static bool isTracking = false;
     GameObject nearEnemy;
 
     private void Start() {
+        z = (float)Math.Cos(transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * bulletVelocity;
+        x = (float)Math.Sin(transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * bulletVelocity;
     }
 
     private void Update() {
-        transform.Translate(transform.TransformDirection(-Vector3.forward * speed));
+        //transform.Translate(transform.TransformDirection(-Vector3.forward * bulletVelocity));
+        transform.Translate(new Vector3(x, 0f, z), Space.World);
         //transform.Translate(transform.InverseTransformDirection(Vector3.forward * speed));
-        //transform.localPosition += transform.TransformDirection(Vector3.up * speed);
+        //transform.localPosition += transform.TransformDirection(Vector3.up * speed);e
+
+        if (tag == "Bullet") {
+            transform.Rotate(Vector3.forward, -10f);
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -86,6 +95,6 @@ public class Bullet : MonoBehaviour {
         return isTracking;
     }
     public float GetSpeed() {
-        return speed;
+        return bulletVelocity;
     }
 }
