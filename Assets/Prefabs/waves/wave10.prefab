@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 4501478418091465410, guid: 1c8eda1146546f34bb2ed0f08a2fb521,
         type: 3}
       propertyPath: DropRate
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4501478418091465410, guid: 1c8eda1146546f34bb2ed0f08a2fb521,
         type: 3}
@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 4501478418091465410, guid: 1c8eda1146546f34bb2ed0f08a2fb521,
         type: 3}
       propertyPath: DropRate
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4501478418091465410, guid: 1c8eda1146546f34bb2ed0f08a2fb521,
         type: 3}
@@ -301,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 4501478418091465410, guid: 1c8eda1146546f34bb2ed0f08a2fb521,
         type: 3}
       propertyPath: DropRate
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4501478418091465410, guid: 1c8eda1146546f34bb2ed0f08a2fb521,
         type: 3}
