@@ -42,9 +42,9 @@ public class PlayerPowerUp : MonoBehaviour {
         switch (powerUpPoint) {
             case 1: playerMove.SetSpeed(2f); break;
             case 2: bulletGenerate.SetShotTime(0.08f); break;
-            case 3: tripleShot.SetTriple(true); break;
+            case 3: floatingBullet.GenerateOption(); break;
             case 4: razer.SetRazer(true); break;
-            case 5: floatingBullet.GenerateOption(); break;
+            case 5: tripleShot.SetTriple(true); break;
             default: Debug.LogError("PowerUpError"); break;
         }
 
@@ -70,7 +70,7 @@ public class PlayerPowerUp : MonoBehaviour {
     //条件配列の更新
     void ConditionArrayUpdate() {
         conditionArray = new bool[maxPoint + 1] { //最初のtrueはダミー
-            true, playerMove.IsMaxSpeed(), bulletGenerate.IsMaxShotTime(), /*bullet.GetTracking()*/tripleShot.GetTriple(), razer.GetRazer(), floatingBullet.IsMaxCount(),
+            true, playerMove.IsMaxSpeed(), bulletGenerate.IsMaxShotTime(), /*bullet.GetTracking()*/ floatingBullet.IsMaxCount(), razer.GetRazer(), tripleShot.GetTriple()
         };
     }
 
