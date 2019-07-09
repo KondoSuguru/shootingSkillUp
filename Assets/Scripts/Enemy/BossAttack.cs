@@ -58,7 +58,7 @@ public class BossAttack : MonoBehaviour
     {
         if (timer >= shotTime * 60)
         {
-            Instantiate(easyBullet, transform.position, transform.rotation);
+            Instantiate(easyBullet, transform.position, easyBullet.transform.rotation);
             timer = 0;
         }
         if (Hitpoint.GetHp() <= maxHp * 0.7)
@@ -69,7 +69,7 @@ public class BossAttack : MonoBehaviour
     {
         if (timer >= shotTime * 60)
         {
-            Instantiate(normalBullet, transform.position, transform.rotation);
+            Instantiate(normalBullet, transform.position, normalBullet.transform.rotation);
             timer = 0;
         }
         if (Hitpoint.GetHp() <= maxHp * 0.3)
@@ -80,7 +80,7 @@ public class BossAttack : MonoBehaviour
     {
         if (timer >= shotTime * 60)
         {
-            Instantiate(hardBullet, transform.position, transform.rotation);
+            Instantiate(hardBullet, transform.position, hardBullet.transform.rotation);
             timer = 0;
         }
     }

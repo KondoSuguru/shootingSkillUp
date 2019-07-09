@@ -26,7 +26,7 @@ public class EnemyShot : MonoBehaviour
         timer++;
         if(timer > shotTime * 60)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            Instantiate(bullet, transform.position,bullet.transform.rotation);
             timer = 0;
         }
     }
