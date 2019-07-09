@@ -7,10 +7,12 @@ public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
     public AudioClip effect;
     public Razer razer;
-    int powerUpPoint = 0;
+    int powerUpPoint = 5;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
     bool[] conditionArray;
+    [SerializeField]
+    bool isAllUp = true;
     BulletGenerate bulletGenerate;
     FloatingBullet floatingBullet;
     TripleShot tripleShot;
@@ -28,6 +30,10 @@ public class PlayerPowerUp : MonoBehaviour {
     }
     private void Update() {
         PowerUp();
+
+        if (Input.GetKeyDown(KeyCode.P)) {
+            powerUpPoint++;
+        }
     }
 
     //プレイヤー強化
@@ -41,11 +47,18 @@ public class PlayerPowerUp : MonoBehaviour {
 
         switch (powerUpPoint) {
             case 1: playerMove.SetSpeed(2f); break;
-            case 2: bulletGenerate.SetShotTime(0.08f); break;
+            case 2: bulletGenerate.SetShotTime(0.07f); break;
             case 3: floatingBullet.GenerateOption(); break;
-            case 4: razer.SetRazer(true); break;
-            case 5: tripleShot.SetTriple(true); break;
+            case 4: razer.SetRazer(true); /*tripleShot.SetTriple(false);*/ break;
+            case 5: tripleShot.SetTriple(true); /*razer.SetRazer(false);*/ break;
             default: Debug.LogError("PowerUpError"); break;
+        }
+        if (!isAllUp) {
+            if (powerUpPoint == 4) {
+                tripleShot.SetTriple(false);
+            } else if (powerUpPoint == 5) {
+                razer.SetRazer(false);
+            }
         }
 
         audioSource.PlayOneShot(effect);
@@ -76,7 +89,7 @@ public class PlayerPowerUp : MonoBehaviour {
 
     //ポイントの調整
     void Point() {
-        for (int i = variableMaxPoint; i != 0; i--) {
+        for (int i = maxPoint; i != 0; i--) {
             if (!conditionArray[i]) {
                 variableMaxPoint = i;
                 break;
