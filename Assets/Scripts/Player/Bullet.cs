@@ -11,15 +11,17 @@ public class Bullet : MonoBehaviour {
     float x;
     static bool isTracking = false;
     GameObject nearEnemy;
+    Vector3 bulletDir;
 
     private void Start() {
-        z = (float)Math.Cos(transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * bulletVelocity;
-        x = (float)Math.Sin(transform.rotation.eulerAngles.y * Mathf.Deg2Rad) * bulletVelocity;
+        z = (float)Math.Cos(transform.rotation.eulerAngles.y * Mathf.Deg2Rad);
+        x = (float)Math.Sin(transform.rotation.eulerAngles.y * Mathf.Deg2Rad);
+        bulletDir = new Vector3(x, 0f, z) * bulletVelocity;
     }
 
     private void Update() {
         //transform.Translate(transform.TransformDirection(-Vector3.forward * bulletVelocity));
-        transform.Translate(new Vector3(x, 0f, z), Space.World);
+        transform.Translate(bulletDir, Space.World);
         //transform.Translate(transform.InverseTransformDirection(Vector3.forward * speed));
         //transform.localPosition += transform.TransformDirection(Vector3.up * speed);e
 
