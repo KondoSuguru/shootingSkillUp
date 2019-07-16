@@ -2971,6 +2971,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   scoreUI: {fileID: 1371205638589373895, guid: 026a28a92bb22f744bee57716b837ca7, type: 3}
+  damageEffect: {fileID: 6259176189907395978, guid: f7de9a5ce74bd2b42889a52fd51f9d9c,
+    type: 3}
+  destroyEffect: {fileID: 6259176189907395978, guid: f7de9a5ce74bd2b42889a52fd51f9d9c,
+    type: 3}
 --- !u!114 &799621138447133721
 MonoBehaviour:
   m_ObjectHideFlags: 0
