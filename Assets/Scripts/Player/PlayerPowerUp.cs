@@ -35,6 +35,7 @@ public class PlayerPowerUp : MonoBehaviour {
             for (int i = 0; i < floatingBullet.GetMaxCount(); i++) {
                 floatingBullet.GenerateOption();
             }
+            ConditionArrayUpdate();
         }
     }
     private void Update() {
