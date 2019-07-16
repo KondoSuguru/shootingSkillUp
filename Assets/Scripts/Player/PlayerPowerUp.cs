@@ -7,6 +7,7 @@ public class PlayerPowerUp : MonoBehaviour {
     public Bullet bullet;
     public AudioClip effect;
     public Razer razer;
+    public Conami conami;
     int powerUpPoint = 0;
     const int maxPoint = 5;
     int variableMaxPoint = maxPoint;
@@ -26,6 +27,15 @@ public class PlayerPowerUp : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         conditionArray = new bool[maxPoint + 1];
         Initialize();
+
+        if (conami.GetConami()) {
+            isAllUp = true;
+            tripleShot.SetTriple(true);
+            razer.SetRazer(true);
+            for (int i = 0; i < floatingBullet.GetMaxCount(); i++) {
+                floatingBullet.GenerateOption();
+            }
+        }
     }
     private void Update() {
         PowerUp();

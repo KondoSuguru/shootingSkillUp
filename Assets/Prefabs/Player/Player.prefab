@@ -382,6 +382,7 @@ MonoBehaviour:
   bullet: {fileID: 5529412470444860059, guid: b671f16f376484f8b89bc79c488f7b3c, type: 3}
   effect: {fileID: 8300000, guid: cdf3eb8f29c1ed14bb2ec3f7eeecbf8c, type: 3}
   razer: {fileID: -580212267225652465, guid: ebd006d80c571475a81af5320f13ee3f, type: 3}
+  conami: {fileID: 5161912345096652603, guid: 7a022138df821ce408e3bd7065694f04, type: 3}
   isAllUp: 0
 --- !u!114 &-5828696837723764691
 MonoBehaviour:

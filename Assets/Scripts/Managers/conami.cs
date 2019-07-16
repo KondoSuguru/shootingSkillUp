@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class conami : MonoBehaviour {
+public class Conami : MonoBehaviour {
+    public AudioClip se;
     KeyCode[] conamiCommand;
     int currentNum;
-    bool enabledConami = false;
+    static bool enabledConami;
+    bool playOneSE;
+
 
     void Awake() {
         conamiCommand = new KeyCode[] {
@@ -14,10 +17,20 @@ public class conami : MonoBehaviour {
             KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.B, KeyCode.A
         };
         currentNum = 0;
+        enabledConami = false;
+        playOneSE = true;
     }
 
     void Update() {
         DownKeyCheck();
+        EnabledConami();
+
+        if (GetConami() && playOneSE) {
+            AudioSource.PlayClipAtPoint(se, Vector3.zero);
+            playOneSE = false;
+        }
+
+        Debug.Log(GetConami());
     }
 
     void DownKeyCheck() {
@@ -32,8 +45,10 @@ public class conami : MonoBehaviour {
         }
     }
 
-    public bool EnabledConami() {
+    private void EnabledConami() {
         enabledConami = currentNum == 10;
+    }
+    public bool GetConami() {
         return enabledConami;
     }
 }

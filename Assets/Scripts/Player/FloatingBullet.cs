@@ -73,9 +73,12 @@ public class FloatingBullet : MonoBehaviour {
         return floatingBullets;
     }
     public bool IsMaxCount() {
-        return currentCount == maxCount ? true : false;
+        return currentCount == maxCount;
     }
     public void InitOption() {
         currentCount = 0;
+    }
+    public int GetMaxCount() {
+        return maxCount;
     }
 }
