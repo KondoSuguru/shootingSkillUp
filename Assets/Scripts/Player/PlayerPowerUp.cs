@@ -84,6 +84,7 @@ public class PlayerPowerUp : MonoBehaviour {
 
         audioSource.PlayOneShot(effect);
         powerUpPoint = 0;
+        ConditionArrayUpdate();
     }
 
     //すべての初期化
