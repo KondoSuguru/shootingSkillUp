@@ -45,7 +45,7 @@ public class BossMove : MonoBehaviour
     void MoveDown( ref Vector3 position)
     {
         position += new Vector3(0, 0, -speed);
-        if (position.z <= 44)
+        if (position.z <= 40)
             move = Move.left;
     }
 
