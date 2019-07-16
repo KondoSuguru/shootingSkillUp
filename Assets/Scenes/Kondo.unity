@@ -3815,7 +3815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 8018253288574317859, guid: 2ea7a874347d0d74fa11cc6ebe7cff76, type: 3}
+  - {fileID: 843988318953979675, guid: 97a333c30629f0f4fb96b717d0a71a75, type: 3}
   - {fileID: 843988318953979675, guid: 3b5897ac791c3ad45a3df8f2dec29949, type: 3}
   - {fileID: 843988318953979675, guid: 3b5897ac791c3ad45a3df8f2dec29949, type: 3}
   - {fileID: 843988318953979675, guid: 2922d295e98e38b4cbe3e7afe6e93843, type: 3}
@@ -3835,7 +3835,7 @@ MonoBehaviour:
   - {fileID: 8018253288574317859, guid: 2ea7a874347d0d74fa11cc6ebe7cff76, type: 3}
   waveTime:
   - 1
-  - 100
+  - 6
   - 8
   - 7
   - 4
