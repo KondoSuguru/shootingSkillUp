@@ -20,7 +20,7 @@ public class BossHitpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hp <= 0 || Input.GetKeyDown(KeyCode.Alpha1))
+        if(hp <= 0 /*|| Input.GetKeyDown(KeyCode.Alpha1)*/)
         {
             scoreUI.SetScore(200);
             //クリアシーンへ遷移

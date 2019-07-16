@@ -383,7 +383,7 @@ MonoBehaviour:
   effect: {fileID: 8300000, guid: cdf3eb8f29c1ed14bb2ec3f7eeecbf8c, type: 3}
   razer: {fileID: -580212267225652465, guid: ebd006d80c571475a81af5320f13ee3f, type: 3}
   conami: {fileID: 5204595636685664974, guid: 7a022138df821ce408e3bd7065694f04, type: 3}
-  isAllUp: 0
+  isAllUp: 1
 --- !u!114 &-5828696837723764691
 MonoBehaviour:
   m_ObjectHideFlags: 0
