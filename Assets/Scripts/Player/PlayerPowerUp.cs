@@ -40,9 +40,9 @@ public class PlayerPowerUp : MonoBehaviour {
     private void Update() {
         PowerUp();
 
-        if (Input.GetKeyDown(KeyCode.P)) {
-            powerUpPoint++;
-        }
+        //if (Input.GetKeyDown(KeyCode.P)) {
+        //    powerUpPoint++;
+        //}
     }
 
     //プレイヤー強化

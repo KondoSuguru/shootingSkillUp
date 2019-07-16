@@ -23,7 +23,7 @@ public class BossHitpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hp <= 0 || Input.GetKeyDown(KeyCode.Alpha1))
+        if(hp <= 0 /*|| Input.GetKeyDown(KeyCode.Alpha1)*/)
         {
             Instantiate(destroyEffect, transform.position, transform.rotation);
             scoreUI.SetScore(200);
