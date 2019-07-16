@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour {
         transform.position = new Vector3(
             Mathf.Clamp(transform.position.x, -14.45f, 14.45f),
             transform.position.y,
-            Mathf.Clamp(transform.position.z, 3.24f, 35f));
+            Mathf.Clamp(transform.position.z, 3.24f, 52f));
 
         //二次関数
         //x -= 0.05f;
