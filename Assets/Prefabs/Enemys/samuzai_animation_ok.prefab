@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  scoreUI: {fileID: 0}
+  scoreUI: {fileID: 1371205638589373895, guid: 026a28a92bb22f744bee57716b837ca7, type: 3}
 --- !u!114 &799621138447133721
 MonoBehaviour:
   m_ObjectHideFlags: 0
