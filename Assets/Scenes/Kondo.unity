@@ -3820,6 +3820,7 @@ MonoBehaviour:
   - {fileID: 843988318953979675, guid: 3b5897ac791c3ad45a3df8f2dec29949, type: 3}
   - {fileID: 843988318953979675, guid: 2922d295e98e38b4cbe3e7afe6e93843, type: 3}
   - {fileID: 843988318953979675, guid: 52ee60bdc224c444da4ca43c9e294767, type: 3}
+  - {fileID: 843988318953979675, guid: c9dab0529d5b6f343be1c9bcde9933f4, type: 3}
   - {fileID: 843988318953979675, guid: 283b964bd746d744c962618edcc672ba, type: 3}
   - {fileID: 843988318953979675, guid: e42acc3a053616e45aff736d215b21fb, type: 3}
   - {fileID: 843988318953979675, guid: 2468e20e0d1a01548bc084bb1f688731, type: 3}
@@ -3838,6 +3839,7 @@ MonoBehaviour:
   - 6
   - 8
   - 7
+  - 4
   - 4
   - 5
   - 7
@@ -5073,7 +5075,7 @@ PrefabInstance:
     - target: {fileID: 7413525467977809484, guid: 1646e9c0aa9ea074c96a87cff808d658,
         type: 3}
       propertyPath: isAllUp
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7341841398308433804, guid: 1646e9c0aa9ea074c96a87cff808d658,
         type: 3}

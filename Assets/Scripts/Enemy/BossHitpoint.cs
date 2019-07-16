@@ -7,6 +7,9 @@ public class BossHitpoint : MonoBehaviour
     public int hp = 100;
     public ScoreUI scoreUI;
 
+    public GameObject damageEffect;
+    public GameObject destroyEffect;
+
     private GameObject manager;
     private GamePlayScene playScene;
 
@@ -22,6 +25,7 @@ public class BossHitpoint : MonoBehaviour
     {
         if(hp <= 0 /*|| Input.GetKeyDown(KeyCode.Alpha1)*/)
         {
+            Instantiate(destroyEffect, transform.position, transform.rotation);
             scoreUI.SetScore(200);
             //クリアシーンへ遷移
             playScene.Clear();
@@ -34,6 +38,7 @@ public class BossHitpoint : MonoBehaviour
         if(other.tag == "Bullet" || other.tag == "Razer")
         {
             hp -= 1;
+            Instantiate(damageEffect, transform.position, transform.rotation);
         }
 
         if (other.gameObject.tag == "DeleteArea")
