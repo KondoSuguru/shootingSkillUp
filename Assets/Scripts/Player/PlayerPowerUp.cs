@@ -35,6 +35,7 @@ public class PlayerPowerUp : MonoBehaviour {
             for (int i = 0; i < floatingBullet.GetMaxCount(); i++) {
                 floatingBullet.GenerateOption();
             }
+            ConditionArrayUpdate();
         }
     }
     private void Update() {
@@ -84,6 +85,7 @@ public class PlayerPowerUp : MonoBehaviour {
 
         audioSource.PlayOneShot(effect);
         powerUpPoint = 0;
+        ConditionArrayUpdate();
     }
 
     //すべての初期化
