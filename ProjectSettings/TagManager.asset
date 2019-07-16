@@ -14,7 +14,6 @@ TagManager:
   - Razer
   - PlaySceneManager
   - FadePanel
-  - TripleSide
   - Shield
   layers:
   - Default
