@@ -13,6 +13,7 @@ public class BossAttack : MonoBehaviour
     public float shotTime = 2.0f; //弾を撃つ間隔（秒）
     private int timer;
     public bool canShot = false;
+    private BossMove move;
 
     enum State
     {
@@ -26,6 +27,7 @@ public class BossAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        move = GetComponent<BossMove>();
         Hitpoint = GetComponent<BossHitpoint>();
         maxHp = Hitpoint.GetHp();
         timer = (int)shotTime * 60;
@@ -36,6 +38,14 @@ public class BossAttack : MonoBehaviour
     void Update()
     {
         timer++;
+
+        if(move.GetMove() == BossMove.Move.leftWarp 
+            || move.GetMove() == BossMove.Move.rigthWarp
+            || move.GetMove() == BossMove.Move.stay)
+        {
+            return;
+        }
+
         switch (state)
         {
             case State.Easy:
