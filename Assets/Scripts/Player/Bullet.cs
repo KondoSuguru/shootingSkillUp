@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     public AudioClip se;
-    float bulletVelocity = 1f;
+    float bulletVelocity = 60f;
     float trackingSpeed = 0.7f;
     float z;
     float x;
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour {
 
     private void Update() {
         //transform.Translate(transform.TransformDirection(-Vector3.forward * bulletVelocity));
-        transform.Translate(bulletDir, Space.World);
+        transform.Translate(bulletDir * Time.deltaTime, Space.World);
         //transform.Translate(transform.InverseTransformDirection(Vector3.forward * speed));
         //transform.localPosition += transform.TransformDirection(Vector3.up * speed);e
 
