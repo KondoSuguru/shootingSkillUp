@@ -21,6 +21,7 @@ public class EnemyToPlayerBullet : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.TransformDirection(Vector3.forward) * speed;
         transform.position = pos;
+        transform.Rotate(Vector3.forward, 10f);
     }
 
     private void OnTriggerEnter(Collider other)

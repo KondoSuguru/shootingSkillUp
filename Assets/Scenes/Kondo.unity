@@ -3903,6 +3903,16 @@ MonoBehaviour:
   - {fileID: 843988318953979675, guid: 4b06f2b403bd15342b52ef0e1828eb65, type: 3}
   - {fileID: 843988318953979675, guid: 8dfaabb7ad3f8004e8b32eea9c4450b0, type: 3}
   - {fileID: 8018253288574317859, guid: 2ea7a874347d0d74fa11cc6ebe7cff76, type: 3}
+  - {fileID: 843988318953979675, guid: 2468e20e0d1a01548bc084bb1f688731, type: 3}
+  - {fileID: 843988318953979675, guid: 6410b868ee8af6946bc391b7e7cf6a50, type: 3}
+  - {fileID: 843988318953979675, guid: 261d2defbf6e8a04fb4de9ecf6289029, type: 3}
+  - {fileID: 843988318953979675, guid: 371cb2b2758bda54291dfe0d75faec8b, type: 3}
+  - {fileID: 843988318953979675, guid: e3fbab7f5b5b5e94ebe104e4f99c705c, type: 3}
+  - {fileID: 843988318953979675, guid: 1f398ee0cc2def844923f191572d0a95, type: 3}
+  - {fileID: 843988318953979675, guid: 292514a44f04abf44b9058123a77344f, type: 3}
+  - {fileID: 843988318953979675, guid: 4b06f2b403bd15342b52ef0e1828eb65, type: 3}
+  - {fileID: 843988318953979675, guid: 371cb2b2758bda54291dfe0d75faec8b, type: 3}
+  - {fileID: 843988318953979675, guid: 292514a44f04abf44b9058123a77344f, type: 3}
   waveTime:
   - 1
   - 6
@@ -3923,6 +3933,16 @@ MonoBehaviour:
   - 6
   - 12
   - 15
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
 --- !u!4 &1618294305
 Transform:
   m_ObjectHideFlags: 0
