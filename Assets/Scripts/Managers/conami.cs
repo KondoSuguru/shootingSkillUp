@@ -14,7 +14,7 @@ public class Conami : MonoBehaviour {
     void Awake() {
         conamiCommand = new KeyCode[] {
             KeyCode.UpArrow, KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.DownArrow, KeyCode.LeftArrow,
-            KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.B, KeyCode.A
+            KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.B, KeyCode.A, KeyCode.Alpha0
         };
         currentNum = 0;
         enabledConami = false;
@@ -30,7 +30,7 @@ public class Conami : MonoBehaviour {
             playOneSE = false;
         }
 
-        Debug.Log(GetConami());
+        Debug.Log(GetConami() + ", " + currentNum);
     }
 
     void DownKeyCheck() {
@@ -46,7 +46,9 @@ public class Conami : MonoBehaviour {
     }
 
     private void EnabledConami() {
-        enabledConami = currentNum == 10;
+        if (currentNum == 10) {
+            enabledConami = true;
+        }
     }
     public bool GetConami() {
         return enabledConami;
